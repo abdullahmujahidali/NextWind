@@ -2,46 +2,49 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoAnimaginary from '@/images/logos/defispot.svg'
+import logoCosmos from '@/images/logos/logo-swissblock.svg'
+import logoHelioStream from '@/images/logos/chimera.svg'
+import logoOpenShuttle from '@/images/logos/hirecinch.svg'
+import logoGladiatorFinance from '@/images/logos/gladiatorFinance.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Gladiator Finance',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Gladiator Finance provides an algorithmic stablecoin integrated with an NFT risk protocol. Our mechanics are completely unique, however, our team was inspired by other great projects created and run by amazing teams, such as Tomb Finance and Wolf Game.',
+    link: {
+      href: 'https://gladiatorfinance.app/',
+      label: 'gladiatorfinance.app',
+    },
+    logo: logoGladiatorFinance,
   },
   {
-    name: 'Animaginary',
+    name: 'Defispot',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+      'DefiSpot is a multichain decentralized exchange (DEX) that aims to make it possible for users to swap, lend and add/remove liquidity to cryptocurrencies without needing a centralized third party or requiring users to provide Know-Your-Customer (KYC) details.',
+    link: { href: 'https://www.defispot.com/', label: 'defispot.com' },
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
+    name: 'Chimera',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
+      'Chimeras is an exciting NFT-based game set in a mystical land of floating islands and magical creatures. Look for resources, create artefacts and trade. Bring prosperity to your land.',
+    link: { href: 'https://chimeras.io/', label: 'chimeras.io' },
     logo: logoHelioStream,
   },
   {
-    name: 'cosmOS',
+    name: 'Swissblock',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
+      'Swissblock is a unique centralized exchange resembling platforms like FTX but with innovative features like paper trading. A standout feature of this exchange is its gasless nature, offering a range of trading options, including Future, Spot, and Margin trading.',
+    link: { href: 'https://swissblock.net/', label: 'swissblock.net' },
     logo: logoCosmos,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Hirecinch',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
+      'The most intuitive & affordable Applicant Tracking System!. All in one hiring software that enables you to attract quality applicants & evaluate them collaboratively so you can find the right fit for your team.',
+    link: { href: 'https://hirecinch.com/', label: 'hirecinch.com' },
     logo: logoOpenShuttle,
   },
 ]
