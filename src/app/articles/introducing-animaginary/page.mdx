@@ -1,11 +1,12 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './pic.png'
 
 export const article = {
-  author: 'Adam Wathan',
-  date: '2022-09-02',
-  title: 'Introducing Animaginary: High performance web animations',
-  description:
-    'When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.',
+  author: 'Abdullah Mujahid',
+  date: '2023-03-17',
+  title: 'Why Fresh is the Best Choice for Server-Side Rendering',
+  description: 'Fresh for server side rendering',
 }
 
 export const metadata = {
@@ -15,92 +16,79 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
+<Image src={designSystem} alt="" />
 
-To make this possible, we needed to squeeze every drop of performance out of the browser possible. And so Animaginary was born.
+I was developing a simple application that involved server-side rendering. I know and have used Next JS to achieve this quite a few times. I was trying to find something new that I could learn from and also share with the audience. I came across Fresh, a cutting-edge web framework that provides a seamless and flexible solution for server-side rendering, and it’s powered by Deno 👀 (but let’s not talk about Deno, that will be for some other day 😁).
+
+Fresh is definitely worth checking out.
+
+Here’s why Fresh is the best choice for server-side rendering:
+
+1. Fresh is built with performance in mind. It uses a lightweight and minimalistic approach, resulting in faster page load times and better overall performance.
+2. The fresh framework is beginner-friendly its intuitive API and clear documentation make it easy to get started and create complex server-side rendering applications.
+3. Fresh provides 0 runtime overhead.
+4. Fresh provides Island based client hydration.
+5. Fresh comes with typescript and can be easily integrated with React JS etc.
+6. Let’s look at the below comparison between Fresh and Next.js 13 to showcase the differences in their approach to server-side rendering
+
+Fresh:
 
 ```js
-import { animate } from '@planetaria/animaginary'
+// server.js file
+const { createServer } = require('fresh')
+const { html } = require('fresh/render')
 
-export function MyComponent({ open, children }) {
+const app = createServer()
+
+app.get('/', async (req, res) => {
+  const postData = await fetch('/api/getData')
+  const { mainTitle, paragraph } = await postData.json()
+  const pageHtml = html`
+    <html>
+      <head>
+        <title>${mainTitle}</title>
+      </head>
+      <body>
+        <h1>${mainTitle}</h1>
+        <p>${paragraph}</p>
+      </body>
+    </html>
+  `
+  res.send(pageHtml)
+})
+app.listen(3000, () => {
+  console.log('Server is up and running')
+})
+```
+
+Next.js:
+
+```js
+// pages/index.js
+
+import { useState, useEffect } from 'react'
+function Index() {
+  const [post, setPost] = useState({ mainTitle: '', body: '' })
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('/api/getData')
+      const json = await res.json()
+      setPost(json)
+    }
+    fetchData()
+  }, [])
   return (
-    <animate.div
-      in={open}
-      animateFrom="opacity-0 scale-95"
-      animateTo="opacity-100 scale-100"
-      duration={350}
-    >
-      {children}
-    </animate.div>
+    <div>
+      <h1>{post.mainTitle}</h1>
+      <p>{post.body}</p>
+    </div>
   )
 }
+export default Index
 ```
 
-Animaginary is our new web animation library that redefines what you thought was possible on the web. Hand-written in optimized WASM, Animaginary can even animate the `height` property of an element at 60fps.
+Fresh takes a simpler and more direct approach to server-side rendering, with HTML created directly on the server using a template literal. The Next.js example, on the other hand, renders the HTML on the server and client using React components.
 
-## Sermone fata
+While Next.js allows for greater flexibility and control over the rendering process, it may also be more difficult and time-consuming to set up. Fresh, on the other hand, is designed to be lighter and easier to use, making it an excellent choice for basic applications or those requiring speedier performance.
 
-Lorem markdownum, bracchia in redibam! Terque unda puppi nec, linguae posterior
-in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite
-variatus, redolentia adeunt. Tyrioque dies, naufraga sua adit partibus celanda
-torquere temptata, erit maneat et ramos, [iam](#) ait dominari
-potitus! Tibi litora matremque fumantia condi radicibus opusque.
-
-Deus feram verumque, fecit, ira tamen, terras per alienae victum. Mutantur
-levitate quas ubi arcum ripas oculos abest. Adest [commissaque
-victae](#) in gemitus nectareis ire diva
-dotibus ora, et findi huic invenit; fatis? Fractaque dare superinposita
-nimiumque simulatoremque sanguine, at voce aestibus diu! Quid veterum hausit tu
-nil utinam paternos ima, commentaque.
-
-```c
-exbibyte_wins = gigahertz(3);
-grayscaleUtilityClient = control_uat;
-pcmciaHibernate = oop_virus_console(text_mountain);
-if (stateWaisFirewire >= -2) {
-    jfs = 647065 / ldapVrml(tutorialRestore, 85);
-    metal_runtime_parse = roomComputingResolution - toolbarUpload +
-            ipx_nvram_open;
-} else {
-    maximizeSidebar *= suffix_url(flatbed + 2, requirements_encoding_node +
-            only_qbe_media, minicomputer);
-}
-```
-
-Aere repetiti cognataque natus. Habebat vela solutis saepe munus nondum adhuc
-oscula nomina pignora corpus deserat.
-
-## Lethaei Pindumve me quae dinumerat Pavor
-
-Idem se saxa fata pollentibus geminos; quos pedibus. Est urnis Herses omnes nec
-divite: et ille illa furit sim verbis Cyllenius.
-
-1. Captus inpleverunt collo
-2. Nec nam placebant
-3. Siquos vulgus
-4. Dictis carissime fugae
-5. A tacitos nulla viginti
-
-Ungues fistula annoso, ille addit linoque motatque uberior verso
-[rubuerunt](#) confine desuetaque. _Sanguine_ anteit
-emerguntque expugnacior est pennas iniqui ecce **haeret** genus: peiora imagine
-fossas Cephisos formosa! Refugitque amata [refelli](#)
-supplex. Summa brevis vetuere tenebas, hostes vetantis, suppressit, arreptum
-regna. Postquam conpescit iuvenis habet corpus, et erratica, perdere, tot mota
-ars talis.
-
-```c
-digital.webcam_dual_frequency = webmasterMms;
-if (5 + language_standalone_google) {
-    cc_inbox_layout *= file_character;
-    task += p;
-    lockUnicode += enterprise_monochrome(tokenFunctionPersonal, keyVirtual,
-            adf);
-}
-windows_binary_esports(87734, array(restoreRomTopology, adRaw(407314),
-        dongleBashThumbnail), interpreter);
-```
-
-Sit volat naturam; motu Cancri. Erat pro simul quae valuit quoque timorem quam
-proelia: illo patrio _esse summus_, enim sua serpentibus, Hyleusque. Est coniuge
-recuso; refert Coroniden ignotos manat, adfectu.
+Thus, Fresh’s approach to server-side rendering is simpler and more direct for creating HTML on the server, whereas Next.js allows greater flexibility and control via React components. Depending on the nature of your project, either strategy may be preferable, but Fresh’s simplicity and quickness make it an appealing alternative to investigate.
