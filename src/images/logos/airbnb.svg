@@ -1,0 +1,17 @@
+<svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="28" height="28" rx="14" fill="#FF5A5F" />
+  <g clip-path="url(#a)">
+    <path
+      d="M14.001 18.182-1.618-.474622 0 1.096.63"
+      fill="#fff" />
+    <!-- BMJ Text -->
+    <text x="50%" y="50%" fill="#fff" text-anchor="middle" dominant-baseline="middle" font-size="8"  font-family="Arial">
+      BMJ
+    </text>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" transform="translate(6 6)" d="M0 0h16v16H0z" />
+    </clipPath>
+  </defs>
+</svg>
