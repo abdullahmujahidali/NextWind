@@ -272,10 +272,10 @@ export default async function Home() {
             advanced solutions for diverse industries. My expertise spans Web
             and AI, navigating stacks like Django, React JS, Node JS, and JAVA.
             I’m adept with AWS and creating user-friendly interfaces for
-            exceptional UX. Staying current with emerging tech, I'm a reliable
+            exceptional UX. Staying current with emerging tech, I’m a reliable
             and informed developer. I enjoy solving problems, adapting fast, and
             delivering tailored top-tier solutions. Passionate about innovation
-            and collaboration, I'm eager to contribute to dynamic environments
+            and collaboration, I’m eager to contribute to dynamic environments
             and growth-focused projects. My blockchain familiarity and project
             history enrich my capabilities, adding depth to my versatility.
           </p>
