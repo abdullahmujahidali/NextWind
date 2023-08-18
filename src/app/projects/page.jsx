@@ -7,6 +7,9 @@ import logoCosmos from '@/images/logos/logo-swissblock.svg'
 import logoHelioStream from '@/images/logos/chimera.svg'
 import logoOpenShuttle from '@/images/logos/hirecinch.svg'
 import logoGladiatorFinance from '@/images/logos/gladiatorFinance.svg'
+import logoQuickers from '@/images/logos/quickers.png'
+import logoArisbe from '@/images/logos/arisbe.png'
+import logoJupiter from '@/images/logos/jupiter.svg'
 
 const projects = [
   {
@@ -46,6 +49,33 @@ const projects = [
       'The most intuitive & affordable Applicant Tracking System!. All in one hiring software that enables you to attract quality applicants & evaluate them collaboratively so you can find the right fit for your team.',
     link: { href: 'https://hirecinch.com/', label: 'hirecinch.com' },
     logo: logoOpenShuttle,
+  },
+  {
+    name: 'Quickers',
+    description:
+      'Quickes is a e-commerce store for grocery in London, United Kingdom. It is a one stop shop for all your grocery needs. Offers a wide range of products from fresh fruits and vegetables to packaged goods.',
+    link: { href: 'http://quickers.uk/', label: 'quickers.uk' },
+    logo: logoQuickers,
+  },
+  {
+    name: 'Jupiterscript',
+    description:
+      'A comprehensive solution for easily working with templates, scripts, and implementing them on routers.',
+    link: {
+      href: 'https://app.jupiterscript.com/',
+      label: 'app.jupiterscript.com',
+    },
+    logo: logoJupiter,
+  },
+  {
+    name: 'Arisbe',
+    description:
+      'Virtual meeting and teaching network for research and evelopment',
+    link: {
+      href: 'https://arisbe.org/',
+      label: 'arisbe.org',
+    },
+    logo: logoArisbe,
   },
 ]
 
