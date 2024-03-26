@@ -82,11 +82,11 @@ export default function About() {
               technologies like Django and React to drive impactful solutions.
             </p>
             <p>
-              Whether it's developing essential backend APIs for NFT
+              Whether it&apos;s developing essential backend APIs for NFT
               marketplaces or revamping existing systems for enhanced
               efficiency, my journey in software engineering is characterized by
-              a relentless pursuit of excellence. With each line of code, I'm
-              committed to pushing the boundaries of what's possible, shaping
+              a relentless pursuit of excellence. With each line of code, I&apos;m
+              committed to pushing the boundaries of what&apos;s possible, shaping
               the digital landscape one project at a time.
             </p>
             {/* <p>
