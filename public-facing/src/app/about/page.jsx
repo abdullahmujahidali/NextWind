@@ -69,7 +69,7 @@ export default function About() {
               My career spans diverse industries, from AI-powered SaaS platforms and regulatory reporting solutions to decentralized finance (DeFi) and NFT marketplaces. I have led major platform automation initiatives, built event-driven architectures, and developed ETL pipelines for large-scale data processing. I thrive in fast-paced environments, solving complex challenges with precision and innovation
             </p>
             <p>
-              Beyond development, I have led teams, optimized system architectures, and managed cloud deployments across AWS, Vercel, and Heroku. Whether it's designing microservices, enhancing DevOps pipelines, or implementing AI-driven workflows, I am committed to delivering impactful, future-ready solutions.
+              Beyond development, I have led teams, optimized system architectures, and managed cloud deployments across AWS, Vercel, and Heroku. Whether it&apos;s designing microservices, enhancing DevOps pipelines, or implementing AI-driven workflows, I am committed to delivering impactful, future-ready solutions.
             </p>
 
           </div>
