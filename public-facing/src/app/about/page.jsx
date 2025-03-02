@@ -1,6 +1,6 @@
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import {
@@ -89,12 +89,7 @@ export default function About() {
               committed to pushing the boundaries of what&apos;s possible, shaping
               the digital landscape one project at a time.
             </p>
-            {/* <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
-            </p> */}
+
           </div>
         </div>
         <div className="lg:pl-20">

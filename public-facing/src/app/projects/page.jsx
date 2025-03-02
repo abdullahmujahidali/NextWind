@@ -2,20 +2,63 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/defispot.svg'
-import logoCosmos from '@/images/logos/logo-swissblock.svg'
-import logoHelioStream from '@/images/logos/chimera.svg'
-import logoOpenShuttle from '@/images/logos/hirecinch.svg'
-import logoGladiatorFinance from '@/images/logos/gladiatorFinance.svg'
-import logoQuickers from '@/images/logos/quickers.png'
 import logoArisbe from '@/images/logos/arisbe.png'
+import logoHelioStream from '@/images/logos/chimera.svg'
+import logoAnimaginary from '@/images/logos/defispot.svg'
+import logoGladiatorFinance from '@/images/logos/gladiatorFinance.svg'
+import logoOpenShuttle from '@/images/logos/hirecinch.svg'
 import logoJupiter from '@/images/logos/jupiter.svg'
+import logoLKSY from '@/images/logos/lksy.png'
+import logoCosmos from '@/images/logos/logo-swissblock.svg'
+import logoPublicEditor from '@/images/logos/pe.png'
+import logoQuickers from '@/images/logos/quickers.png'
+import logoRegnxt from '@/images/logos/regnxt.png'
+import logoVetAi from '@/images/logos/vetai.svg'
 
 const projects = [
   {
+    name: 'Veterinary AI',
+    description:
+      'A comprehensive SaaS platform for veterinary practices using microservices. Features include a doctor-facing admin portal for prompt engineering and AI interaction, alongside a public-facing interface for pet owners. Implements custom LLM solutions for analyzing medical records and uses LangGraph for orchestrating AI workflows.',
+    link: {
+      href: 'https://app.staging.veterinaryai.com/',
+      blank: true,
+      label: 'veterinaryai.com',
+    },
+    logo: logoVetAi,
+  },
+  {
+    name: 'RegNxt',
+    description:
+      'A scalable regulatory reporting platform for financial institutions. Features data versioning with comprehensive audit trails and visualization tools for complex data relationships. Implemented clean architecture patterns and built a responsive UI with advanced filtering capabilities.',
+    link: { href: 'https://www.regnxt.eu', label: 'regnxt.eu' },
+    logo: logoRegnxt,
+  },
+  {
+    name: 'Public Editor',
+    description:
+      'Developed and automated the Public Editor platform with robust authentication and payment integrations. Integrated Anthropic\'s Claude 3.5 for advanced automation, NLP solutions to analyze content, and tools for scraping articles.',
+    link: { href: '#', label: 'publiceditor.io' },
+    logo: logoPublicEditor,
+  },
+  {
+    name: 'LKSY',
+    description:
+      'An educational platform for JILAEE that allows users to complete coding tasks using Scratch. Built with Django and hosted on Heroku, with tasks and submissions managed through AWS S3 and tested with the Whisker framework on AWS Lambda.',
+    link: { href: 'https://www.jilaee.org/', label: 'jilaee.org' },
+    logo: logoLKSY,
+  },
+  {
+    name: 'Hirecinch',
+    description:
+      'An intuitive applicant tracking system with features for both recruiters and candidates. Led a major refactoring project for scalability, implemented a billing system with Stripe\'s API, integrated AI workflows, and created a custom career page generator.',
+    link: { href: 'https://hirecinch.com/', label: 'hirecinch.com' },
+    logo: logoOpenShuttle,
+  },
+  {
     name: 'Gladiator Finance',
     description:
-      'Gladiator Finance provides an algorithmic stablecoin integrated with an NFT risk protocol. Our mechanics are completely unique, however, our team was inspired by other great projects created and run by amazing teams, such as Tomb Finance and Wolf Game.',
+      'An NFT marketplace with algorithmic stablecoin integrated with an NFT risk protocol. Developed essential backend APIs and implemented frontend wallet integrations to facilitate smart contract function calls from the backend.',
     link: {
       href: 'https://gladiatorfinance.app/',
       label: 'gladiatorfinance.app',
@@ -25,9 +68,19 @@ const projects = [
   {
     name: 'Defispot',
     description:
-      'DefiSpot is a multichain decentralized exchange (DEX) that aims to make it possible for users to swap, lend and add/remove liquidity to cryptocurrencies without needing a centralized third party or requiring users to provide Know-Your-Customer (KYC) details.',
+      'A multi-chain decentralized exchange that allows users to swap, lend and manage liquidity without KYC. Developed essential backend wallet APIs using exchange.js to power a versatile multi-chain wallet for Ethereum, Bitcoin, and other cryptocurrencies.',
     link: { href: 'https://www.defispot.com/', label: 'defispot.com' },
     logo: logoAnimaginary,
+  },
+  {
+    name: 'Arisbe',
+    description:
+      'An e-learning platform using Django and React.js, hosted on AWS. Features virtual classes with Zoom integration, quiz creation tools, and assessment capabilities. Designed the architecture and implemented custom front-end components.',
+    link: {
+      href: 'https://arisbe.org/',
+      label: 'arisbe.org',
+    },
+    logo: logoArisbe,
   },
   {
     name: 'Chimera',
@@ -67,18 +120,7 @@ const projects = [
     },
     logo: logoJupiter,
   },
-  {
-    name: 'Arisbe',
-    description:
-      'Virtual meeting and teaching network for research and evelopment',
-    link: {
-      href: 'https://arisbe.org/',
-      label: 'arisbe.org',
-    },
-    logo: logoArisbe,
-  },
 ]
-
 function LinkIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>

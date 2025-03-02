@@ -12,14 +12,13 @@ import {
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoCarteBlanche from '@/images/logos/carteblanche.svg'
+import logoCrocuszone from '@/images/logos/download.png'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoGlobalgroupone from '@/images/logos/globalGroupOne.svg'
 import logoVadaInnovation from '@/images/logos/vadainnovation.svg'
 import { formatDate } from '@/lib/formatDate'
 import { getAllArticles } from '@/lib/getAllArticles'
 
-
-// test push
 
 function MailIcon(props) {
   return (
@@ -136,7 +135,7 @@ function Resume() {
   let resume = [
     {
       company: 'Vada Innovation',
-      title: 'Co-Founder | Chief Technology Officer',
+      title: 'Technical Lead | Project Manager',
       logo: logoVadaInnovation,
       start: '2023',
       end: {
@@ -145,7 +144,7 @@ function Resume() {
       },
     },
     {
-      company: 'Carte Blanche Innovation Integrated',
+      company: 'Carte Blanche',
       title: 'Senior Software Engineer',
       logo: logoCarteBlanche,
       start: '2021',
@@ -155,15 +154,22 @@ function Resume() {
       },
     },
     {
-      company: 'Global Group One',
-      title: 'Technical Development Lead',
-      logo: logoGlobalgroupone,
+      company: 'Crocus Zone',
+      title: 'Software Engineer',
+      logo: logoCrocuszone, // You may want to replace with an appropriate logo
       start: '2022',
+      end: '2024',
+    },
+    {
+      company: 'Global Group One',
+      title: 'Development Lead',
+      logo: logoGlobalgroupone,
+      start: '2023',
       end: '2023',
     },
     {
       company: 'BMJ Consultants',
-      title: 'Lead JAVA Developer',
+      title: 'Backend Developer',
       logo: logoAirbnb,
       start: '2020',
       end: '2021',
@@ -217,7 +223,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://drive.google.com/file/d/1U_shjrVhUJwrbwaAwIHvN_ISEFNE3kVT/view?usp=sharing"
+        href="https://drive.google.com/file/d/1jcxEO3B5qw75AxWAvHevVKLREE1bKwv1/view?usp=sharing"
         variant="secondary"
         className="group mt-6 w-full"
       >
@@ -241,17 +247,19 @@ export default async function Home() {
             Senior Software engineer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Abdullah Mujahid, an experienced full-stack software developer
-            from Lahore, Pakistan. With 5 years experience, I excel in crafting
-            advanced solutions for diverse industries. My expertise spans Web
-            and AI, navigating stacks like Django, React JS, Node JS, and JAVA.
-            I’m adept with AWS and creating user-friendly interfaces for
-            exceptional UX. Staying current with emerging tech, I’m a reliable
-            and informed developer. I enjoy solving problems, adapting fast, and
-            delivering tailored top-tier solutions. Passionate about innovation
-            and collaboration, I’m eager to contribute to dynamic environments
-            and growth-focused projects. My blockchain familiarity and project
-            history enrich my capabilities, adding depth to my versatility.
+            I&apos;m Abdullah Mujahid, a Senior Full Stack Engineer with expertise in building scalable applications across diverse industries. With over 5 years of experience, I specialize in Django, React, FastAPI, and cloud infrastructure on AWS.
+          </p>
+
+          <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+            I&apos;ve led development for financial platforms, AI-powered veterinary systems, and blockchain applications, implementing microservices architectures, data pipelines, and innovative AI solutions. My technical toolkit includes Python, JavaScript, Next.js, PostgreSQL, Redis, Docker, and various AWS services.
+          </p>
+
+          <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+            Beyond coding, I excel at architectural design, team leadership, and translating business requirements into technical solutions. Currently serving as Technical Lead at Vada Innovation and Senior Engineer at Carte Blanche, I focus on creating high-performance applications that deliver measurable business value through thoughtful architecture and clean, maintainable code.
+          </p>
+
+          <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+            I&apos;m passionate about leveraging emerging technologies like LLMs and blockchain to solve complex problems, and I&apos;m always open to discussing new opportunities for collaboration.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
