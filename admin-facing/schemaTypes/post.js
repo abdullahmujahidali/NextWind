@@ -40,7 +40,7 @@ export default {
     {
       name: 'content',
       title: 'Content',
-      type: 'markdown', x
+      type: 'markdown',
       validation: Rule => Rule.required()
     },
     {
