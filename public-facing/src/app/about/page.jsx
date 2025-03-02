@@ -58,36 +58,18 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I&apos;m Abdullah Mujahid. I reside in Lahore, Pakistan, where I
-            engineer tomorrow&apos;s digital solutions.
+            I create high-performance systems that drive innovation and efficiency
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              As a child, my love for technology was evident. I immersed myself
-              in the world of computers, tinkering with code and exploring the
-              endless possibilities of programming languages. With a keen
-              interest in AI, I delved into research, culminating in the
-              publication of a paper on Hand Gesture Recognition, showcasing my
-              early passion and expertise.
-              <a href="https://www.mdpi.com/2076-3417/11/9/4164">
-                My Published Paper
-              </a>
+              I’m Abdullah Mujahid, a Senior Full Stack Software Engineer with a passion for building scalable, high-performance applications. With extensive experience in Django, FastAPI, React.js, and Next.js, I specialize in crafting seamless digital experiences, optimizing backend processes, and integrating cutting-edge technologies like LLMs, AI-driven automation, and Web3.
+
             </p>
             <p>
-              Fast forward to my career as a Senior Full Stack Software
-              Engineer, I find myself at the forefront of innovation. From
-              spearheading comprehensive refactoring efforts to optimizing
-              backend processes and enhancing frontend usability, each project
-              is a testament to my dedication and proficiency in utilizing
-              technologies like Django and React to drive impactful solutions.
+              My career spans diverse industries, from AI-powered SaaS platforms and regulatory reporting solutions to decentralized finance (DeFi) and NFT marketplaces. I have led major platform automation initiatives, built event-driven architectures, and developed ETL pipelines for large-scale data processing. I thrive in fast-paced environments, solving complex challenges with precision and innovation
             </p>
             <p>
-              Whether it&apos;s developing essential backend APIs for NFT
-              marketplaces or revamping existing systems for enhanced
-              efficiency, my journey in software engineering is characterized by
-              a relentless pursuit of excellence. With each line of code, I&apos;m
-              committed to pushing the boundaries of what&apos;s possible, shaping
-              the digital landscape one project at a time.
+              Beyond development, I have led teams, optimized system architectures, and managed cloud deployments across AWS, Vercel, and Heroku. Whether it's designing microservices, enhancing DevOps pipelines, or implementing AI-driven workflows, I am committed to delivering impactful, future-ready solutions.
             </p>
 
           </div>
@@ -115,7 +97,7 @@ export default function About() {
               Follow on GitHub
             </SocialLink>
             <SocialLink
-              href="https://www.linkedin.com/in/abdullah-mujahid-211849186/"
+              href="https://www.linkedin.com/in/abdullahmujahidali/"
               icon={LinkedInIcon}
               className="mt-4"
             >
