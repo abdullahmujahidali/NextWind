@@ -62,7 +62,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’m Abdullah Mujahid, a Senior Full Stack Software Engineer with a passion for building scalable, high-performance applications. With extensive experience in Django, FastAPI, React.js, and Next.js, I specialize in crafting seamless digital experiences, optimizing backend processes, and integrating cutting-edge technologies like LLMs, AI-driven automation, and Web3.
+              I&apos;m Abdullah Mujahid, a Senior Full Stack Software Engineer with a passion for building scalable, high-performance applications. With extensive experience in Django, FastAPI, React.js, and Next.js, I specialize in crafting seamless digital experiences, optimizing backend processes, and integrating cutting-edge technologies like LLMs, AI-driven automation, and Web3.
 
             </p>
             <p>
