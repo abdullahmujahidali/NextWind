@@ -1,6 +1,6 @@
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -13,9 +13,9 @@ import {
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoCarteBlanche from '@/images/logos/carteblanche.svg'
-import logoVadaInnovation from '@/images/logos/vadainnovation.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoGlobalgroupone from '@/images/logos/globalGroupOne.svg'
+import logoVadaInnovation from '@/images/logos/vadainnovation.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -142,7 +142,7 @@ function Resume() {
   let resume = [
     {
       company: 'Vada Innovation',
-      title: 'Project Manager',
+      title: 'Co-Founder | Chief Technology Officer',
       logo: logoVadaInnovation,
       start: '2023',
       end: {
@@ -207,9 +207,8 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
+                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
+                  }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
