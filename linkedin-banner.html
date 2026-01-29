@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Banner - Abdullah Mujahid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      padding: 40px;
+      gap: 60px;
+    }
+
+    h2 {
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.7;
+    }
+
+    .banner-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Banner Option 1 - Minimal & Bold */
+    .banner-1 {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f0f1a 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 120px;
+    }
+
+    .banner-1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    }
+
+    .banner-1 .left-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner-1 .tagline {
+      font-size: 42px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      max-width: 700px;
+    }
+
+    .banner-1 .tagline span {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner-1 .subtitle {
+      margin-top: 16px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
+    }
+
+    .banner-1 .right-content {
+      position: relative;
+      z-index: 1;
+      text-align: right;
+    }
+
+    .banner-1 .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .banner-1 .stat {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .banner-1 .stat-number {
+      font-size: 24px;
+      font-weight: 700;
+      color: #6366F1;
+    }
+
+    .banner-1 .cta {
+      margin-top: 24px;
+      padding: 10px 20px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .banner-1 .cta-icon {
+      width: 16px;
+      height: 16px;
+      fill: #6366F1;
+    }
+
+    .banner-1 .cta-text {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    /* Accent line */
+    .banner-1 .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%);
+    }
+
+    /* Banner Option 2 - Clean & Professional */
+    .banner-2 {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #6366F1 0%, #4F46E5 50%, #7C3AED 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 120px;
+    }
+
+    .banner-2::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .banner-2::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+    }
+
+    .banner-2 .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .banner-2 .left {
+      max-width: 800px;
+    }
+
+    .banner-2 .name {
+      font-size: 48px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .banner-2 .role {
+      font-size: 22px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 8px;
+    }
+
+    .banner-2 .cta {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    .banner-2 .cta-icon {
+      font-size: 16px;
+    }
+
+    .banner-2 .cta-text {
+      font-size: 15px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .banner-2 .right {
+      display: flex;
+      gap: 40px;
+    }
+
+    .banner-2 .stat-box {
+      text-align: center;
+      padding: 20px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    .banner-2 .stat-box .number {
+      font-size: 36px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .banner-2 .stat-box .label {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* Banner Option 3 - Dark & Techy */
+    .banner-3 {
+      width: 1584px;
+      height: 396px;
+      background: #0a0a0f;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-3 .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    .banner-3 .glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .banner-3 .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .banner-3 .main-text {
+      font-size: 52px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -1px;
+    }
+
+    .banner-3 .main-text .highlight {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner-3 .sub-text {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 16px;
+      font-weight: 400;
+    }
+
+    .banner-3 .bottom-row {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .banner-3 .pills {
+      display: flex;
+      gap: 12px;
+    }
+
+    .banner-3 .pill {
+      padding: 8px 20px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 100px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .banner-3 .divider {
+      width: 1px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .banner-3 .cta {
+      padding: 10px 24px;
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      border-radius: 100px;
+      font-size: 14px;
+      color: white;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Banner Option 4 - Simple with CTA focus */
+    .banner-4 {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 140px;
+    }
+
+    .banner-4::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .banner-4 .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .banner-4 .left {
+      max-width: 750px;
+    }
+
+    .banner-4 .tagline {
+      font-size: 46px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.15;
+    }
+
+    .banner-4 .tagline .gradient {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner-4 .stats-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .banner-4 .mini-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .banner-4 .mini-stat .num {
+      font-size: 28px;
+      font-weight: 700;
+      color: #6366F1;
+    }
+
+    .banner-4 .mini-stat .label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .banner-4 .right {
+      text-align: center;
+    }
+
+    .banner-4 .cta-box {
+      padding: 28px 40px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 16px;
+    }
+
+    .banner-4 .cta-label {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .banner-4 .cta-link {
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .banner-4 .cta-link span {
+      color: #6366F1;
+    }
+
+    .banner-4 .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%);
+    }
+
+    /* Instructions */
+    .instructions {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 24px 32px;
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      max-width: 700px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .instructions strong {
+      color: #6366F1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instructions">
+    <strong>How to use:</strong> Take a screenshot of your preferred banner (1584 x 396 px).<br>
+    Tip: Use browser zoom at 100% for best quality. Colors: <strong>#6366F1</strong> (primary), <strong>#8B5CF6</strong> (secondary)
+  </div>
+
+  <!-- Banner Option 1 - Minimal & Bold with CTA -->
+  <div class="banner-container">
+    <h2>Option 1 — Minimal & Bold with CTA</h2>
+    <div class="banner-1">
+      <div class="left-content">
+        <div class="tagline">
+          I build <span>teams that ship</span><br>
+          and <span>systems that scale</span>.
+        </div>
+        <div class="subtitle">Engineering Manager & Tech Lead</div>
+      </div>
+      <div class="right-content">
+        <div class="stats">
+          <div class="stat">
+            <span>Years of Experience</span>
+            <span class="stat-number">8+</span>
+          </div>
+          <div class="stat">
+            <span>Research Citations</span>
+            <span class="stat-number">389+</span>
+          </div>
+          <div class="stat">
+            <span>Users Impacted</span>
+            <span class="stat-number">100K+</span>
+          </div>
+        </div>
+        <div class="cta">
+          <span class="cta-icon">📅</span>
+          <span class="cta-text">cal.com/abdullahmujahidali</span>
+        </div>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+  <!-- Banner Option 2 - Gradient with CTA -->
+  <div class="banner-container">
+    <h2>Option 2 — Gradient with CTA</h2>
+    <div class="banner-2">
+      <div class="content">
+        <div class="left">
+          <div class="name">Abdullah Mujahid</div>
+          <div class="role">Engineering Manager & Tech Lead</div>
+          <div class="cta">
+            <span class="cta-icon">📅</span>
+            <span class="cta-text">Book a call → cal.com/abdullahmujahidali</span>
+          </div>
+        </div>
+        <div class="right">
+          <div class="stat-box">
+            <div class="number">8+</div>
+            <div class="label">Years</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">389+</div>
+            <div class="label">Citations</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">100K+</div>
+            <div class="label">Users</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner Option 3 - Dark & Centered with CTA -->
+  <div class="banner-container">
+    <h2>Option 3 — Dark & Centered</h2>
+    <div class="banner-3">
+      <div class="grid-bg"></div>
+      <div class="glow"></div>
+      <div class="content">
+        <div class="main-text">
+          Building <span class="highlight">Teams</span> & <span class="highlight">Systems</span> That Scale
+        </div>
+        <div class="sub-text">Engineering Manager • Tech Lead • AI Architect</div>
+        <div class="bottom-row">
+          <div class="pills">
+            <span class="pill">8+ Years</span>
+            <span class="pill">389+ Citations</span>
+            <span class="pill">100K+ Users</span>
+          </div>
+          <div class="divider"></div>
+          <div class="cta">
+            <span>📅</span>
+            <span>cal.com/abdullahmujahidali</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner Option 4 - CTA Focused (NEW) -->
+  <div class="banner-container">
+    <h2>Option 4 — CTA Focused (Recommended)</h2>
+    <div class="banner-4">
+      <div class="content">
+        <div class="left">
+          <div class="tagline">
+            Building <span class="gradient">Teams</span> That Ship<br>
+            & <span class="gradient">Systems</span> That Scale
+          </div>
+          <div class="stats-row">
+            <div class="mini-stat">
+              <span class="num">8+</span>
+              <span class="label">Years</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">389+</span>
+              <span class="label">Citations</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">100K+</span>
+              <span class="label">Users</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="cta-box">
+            <div class="cta-label">Let's Talk</div>
+            <div class="cta-link"><span>cal.com/</span>abdullahmujahidali</div>
+          </div>
+        </div>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+</body>
+</html>
