@@ -2,11 +2,14 @@
 
 import { useContext } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
 
 import { AppContext } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
+import portraitImage from '@/images/abdullah.JPG'
 
 function ArrowLeftIcon(props) {
   return (
@@ -30,38 +33,106 @@ export function ArticleLayout({ children, article, isRssFeed = false }) {
   }
 
   return (
-    <Container className="mt-16 lg:mt-32">
-      <div className="xl:relative">
-        <div className="mx-auto max-w-2xl">
-          {previousPathname && (
-            <button
-              type="button"
-              onClick={() => router.back()}
-              aria-label="Go back to articles"
-              className="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20 lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-0 xl:mt-0"
-            >
-              <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
-            </button>
-          )}
+    <div className="py-16 md:py-24">
+      <Container>
+        <div className="mx-auto max-w-3xl">
+          {/* Back link */}
+          <Link
+            href="/articles"
+            className="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          >
+            <ArrowLeftIcon className="h-4 w-4 stroke-current transition-transform group-hover:-translate-x-1" />
+            Back to articles
+          </Link>
+
           <article>
-            <header className="flex flex-col">
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                {article.title}
-              </h1>
+            {/* Header */}
+            <header className="border-b border-zinc-200 pb-8 dark:border-zinc-800">
+              {/* Date */}
               <time
                 dateTime={article.date}
-                className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+                className="text-sm text-zinc-500"
               >
-                <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                <span className="ml-3">{formatDate(article.date)}</span>
+                {formatDate(article.date)}
               </time>
+
+              {/* Title */}
+              <h1 className="mt-4 font-display text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
+                {article.title}
+              </h1>
+
+              {/* Description */}
+              {article.description && (
+                <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+                  {article.description}
+                </p>
+              )}
+
+              {/* Author */}
+              <div className="mt-6 flex items-center gap-3">
+                <Image
+                  src={portraitImage}
+                  alt={article.author}
+                  className="h-10 w-10 rounded-full object-cover"
+                  sizes="40px"
+                />
+                <div>
+                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {article.author}
+                  </p>
+                  <p className="text-sm text-zinc-500">
+                    Engineering Leader & AI Architect
+                  </p>
+                </div>
+              </div>
             </header>
+
+            {/* Content */}
             <Prose className="mt-8" data-mdx-content>
               {children}
             </Prose>
+
+            {/* Footer */}
+            <footer className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
+              <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+                <Link
+                  href="/articles"
+                  className="group inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                >
+                  <ArrowLeftIcon className="h-4 w-4 stroke-current transition-transform group-hover:-translate-x-1" />
+                  Back to all articles
+                </Link>
+
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-zinc-500">Share:</span>
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+                    aria-label="Share on Twitter"
+                  >
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
+                  <a
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+                    aria-label="Share on LinkedIn"
+                  >
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </footer>
           </article>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   )
 }

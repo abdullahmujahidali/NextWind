@@ -1,7 +1,9 @@
-import Image from 'next/image'
+'use client'
 
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { ScrollReveal } from '@/components/ui/ScrollReveal'
+
 import logoArisbe from '@/images/logos/arisbe.png'
 import logoHelioStream from '@/images/logos/chimera.svg'
 import logoAnimaginary from '@/images/logos/defispot.svg'
@@ -17,169 +19,251 @@ import logoMitra from '@/images/logos/mitra-ai.svg'
 import logoSiParadigm from '@/images/logos/siParadigm.svg'
 import logoDeals4Autos from '@/images/logos/airbnb.svg'
 
-const projects = [
+const featuredProjects = [
   {
-    name: 'AIRA - Investor Intelligence Platform',
-    description:
-      'Architected an AI-powered investor intelligence platform from MVP to production. Features multi-LLM architecture with per-tenant configuration for intelligent deal analysis, pitch deck extraction, and personalized outreach. Built advanced Elasticsearch-powered investor search reducing discovery time by 60%.',
-    link: {
-      href: 'https://aira.astelventures.com',
-      label: 'aira.astelventures.com',
-    },
+    name: 'AIRA',
+    tagline: 'AI-powered investor intelligence',
+    role: 'Lead Architect',
+    outcome: 'Multi-LLM system processing millions of data points, 60% faster investor discovery',
+    link: 'https://aira.astelventures.com',
     logo: logoAira,
+    tech: ['Python', 'LangChain', 'Elasticsearch', 'RAG'],
   },
   {
-    name: 'Mitra AI - Voice Relationship Mentor',
-    description:
-      'Built real-time voice AI agents using Python and LiveKit, integrating GPT-4, Speechmatics/Deepgram STT, and ElevenLabs TTS. Implemented speaker diarization with 92%+ accuracy for couples sessions, with HIPAA-compliant AES-256-GCM encryption for all transcripts.',
-    link: {
-      href: '#',
-      label: 'mitra.ai',
-    },
-    logo: logoMitra,
-  },
-  {
-    name: 'Veterinary AI',
-    description:
-      'Led technical vision for a veterinary SaaS platform reducing diagnostic time by 40% for 50+ practices. Developed custom LLM solutions analyzing 10,000+ medical records daily with 87% accuracy. Integrated LangGraph for AI workflows and Pinecone for vector storage.',
-    link: {
-      href: 'https://app.staging.veterinaryai.com/',
-      blank: true,
-      label: 'veterinaryai.com',
-    },
-    logo: logoVetAi,
-  },
-  {
-    name: 'RegNxt - Regulatory Reporting',
-    description:
-      'As Engineering Manager at Sparignite, I designed and built this regulatory reporting platform from the ground up. Led UI/UX design, architected the backend, managed DevOps, and lead a team of 6 engineers. Platform reduced compliance reporting time by 40% for financial institutions and passed all regulatory audits.',
-    link: { href: 'https://www.regnxt.eu', label: 'regnxt.eu' },
+    name: 'RegNxt',
+    tagline: 'Regulatory reporting for European banks',
+    role: 'Engineering Manager',
+    outcome: 'Built team of 6, platform now serves 50+ financial institutions',
+    link: 'https://www.regnxt.eu',
     logo: logoRegnxt,
+    tech: ['React', 'Django', 'PostgreSQL', 'AWS'],
   },
   {
-    name: 'SI Paradigm - Medical Lab Platform',
-    description:
-      'Led 7 developers delivering a HIPAA-compliant laboratory management platform reducing lab processing time by 30%. Integrated with 5 third-party laboratory systems. Redis caching improved response times by 45% during peak hours. Achieved 100% client retention.',
-    link: { href: '#', label: 'siparadigm.com' },
+    name: 'Mitra AI',
+    tagline: 'Real-time voice AI for therapy sessions',
+    role: 'Technical Lead',
+    outcome: '92%+ speaker diarization accuracy, HIPAA-compliant',
+    link: '#',
+    logo: logoMitra,
+    tech: ['Python', 'LiveKit', 'GPT-4', 'WebSockets'],
+  },
+  {
+    name: 'VeterinaryAI',
+    tagline: 'AI diagnostics for veterinary practices',
+    role: 'Tech Lead',
+    outcome: '10K+ medical records analyzed daily with 87% accuracy',
+    link: 'https://app.staging.veterinaryai.com/',
+    logo: logoVetAi,
+    tech: ['LangGraph', 'Pinecone', 'FastAPI', 'React'],
+  },
+]
+
+const otherProjects = [
+  {
+    name: 'SI Paradigm',
+    description: 'HIPAA-compliant lab management platform, 30% faster processing',
     logo: logoSiParadigm,
+    link: '#',
   },
   {
     name: 'Public Editor',
-    description:
-      'Architected secure MFA authentication improving account security by 65%. Integrated Anthropic Claude 3.5 reducing manual content review by 75%. Built NLP solutions processing 10,000+ news articles daily with 92% accuracy. Amazon SES achieved 99.8% email delivery.',
-    link: { href: '#', label: 'publiceditor.io' },
+    description: 'Claude AI integration for news content review, 75% less manual work',
     logo: logoPublicEditor,
+    link: '#',
   },
   {
-    name: 'Hirecinch - ATS Platform',
-    description:
-      'Led product strategy and team of 4 developers through major refactoring. Resume Parser microservice automated candidate extraction with 85% accuracy, saving recruiters 20+ hours weekly. Custom career pages improved application completion by 45%. Stripe integration increased revenue collection by 30%.',
-    link: { href: 'https://hirecinch.com/', label: 'hirecinch.com' },
+    name: 'Hirecinch',
+    description: 'ATS platform with resume parsing, 20+ hrs/week saved for recruiters',
     logo: logoOpenShuttle,
+    link: 'https://hirecinch.com/',
   },
   {
-    name: 'Deals 4 Autos - Car BDC Platform',
-    description:
-      'Led transformation from PHP to React/Django architecture increasing dealership efficiency by 35%. Managed 5 developers while serving 40+ active dealerships. Payment system processing $2M+ monthly with 99.8% reliability. AWS migration improved uptime from 94% to 99.5%.',
-    link: { href: '#', label: 'deals4autos.com' },
+    name: 'Deals 4 Autos',
+    description: 'Car dealership platform processing $2M+/month',
     logo: logoDeals4Autos,
+    link: '#',
   },
   {
-    name: 'LKSY - Educational Platform',
-    description:
-      'Built interactive learning platform enabling 1,500+ students to complete Scratch coding exercises. AWS S3 handled 20,000+ monthly submissions with 99.9% availability. Whisker framework on Lambda provided immediate feedback, improving learning outcomes by 30%.',
-    link: { href: 'https://www.jilaee.org/', label: 'jilaee.org' },
+    name: 'LKSY',
+    description: 'Educational platform for 1,500+ students learning Scratch',
     logo: logoLKSY,
+    link: 'https://www.jilaee.org/',
   },
   {
     name: 'Gladiator Finance',
-    description:
-      'An NFT marketplace with algorithmic stablecoin integrated with an NFT risk protocol. Developed essential backend APIs and implemented frontend wallet integrations to facilitate smart contract function calls from the backend.',
-    link: {
-      href: 'https://gladiatorfinance.app/',
-      label: 'gladiatorfinance.app',
-    },
+    description: 'NFT marketplace with algorithmic stablecoin',
     logo: logoGladiatorFinance,
+    link: 'https://gladiatorfinance.app/',
   },
   {
     name: 'Defispot',
-    description:
-      'A multi-chain decentralized exchange for swapping, lending and liquidity management without KYC. Developed backend wallet APIs using exchange.js powering a versatile multi-chain wallet for Ethereum, Bitcoin, and other cryptocurrencies.',
-    link: { href: 'https://www.defispot.com/', label: 'defispot.com' },
+    description: 'Multi-chain DEX for swapping and liquidity management',
     logo: logoAnimaginary,
+    link: 'https://www.defispot.com/',
   },
   {
-    name: 'Swissblock Exchange',
-    description:
-      'A unique centralized exchange with innovative features like paper trading. Gasless nature with comprehensive trading options including Future, Spot, and Margin trading.',
-    link: { href: 'https://swissblock.net/', label: 'swissblock.net' },
+    name: 'Swissblock',
+    description: 'Centralized exchange with paper trading',
     logo: logoCosmos,
+    link: 'https://swissblock.net/',
   },
   {
-    name: 'Arisbe - E-Learning',
-    description:
-      'E-learning platform with Django and React.js hosted on AWS. Features virtual classes with Zoom integration, quiz creation tools, and assessment capabilities.',
-    link: {
-      href: 'https://arisbe.org/',
-      label: 'arisbe.org',
-    },
+    name: 'Arisbe',
+    description: 'E-learning platform with Zoom integration',
     logo: logoArisbe,
+    link: 'https://arisbe.org/',
   },
   {
-    name: 'Chimera - NFT Game',
-    description:
-      'An NFT-based game set in a mystical land of floating islands and magical creatures. Resource gathering, artefact creation, and trading mechanics.',
-    link: { href: 'https://chimeras.io/', label: 'chimeras.io' },
+    name: 'Chimera',
+    description: 'NFT-based game with resource gathering mechanics',
     logo: logoHelioStream,
+    link: 'https://chimeras.io/',
   },
 ]
-function LinkIcon(props) {
+
+function FeaturedCard({ project, index }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-        fill="currentColor"
-      />
-    </svg>
+    <motion.a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block rounded-2xl border border-zinc-200 bg-white p-6 transition-all hover:border-primary/30 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-primary/30"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      whileHover={{ y: -2 }}
+    >
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800">
+            <Image src={project.logo} alt="" className="h-6 w-6 object-contain" unoptimized />
+          </div>
+          <div>
+            <h3 className="font-semibold text-zinc-900 group-hover:text-primary dark:text-zinc-100 dark:group-hover:text-primary-400">
+              {project.name}
+            </h3>
+            <p className="text-sm text-zinc-500">{project.role}</p>
+          </div>
+        </div>
+        <svg className="h-5 w-5 text-zinc-400 transition-transform group-hover:translate-x-1 group-hover:text-primary dark:group-hover:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </div>
+
+      <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">{project.tagline}</p>
+
+      <div className="mt-4 rounded-lg bg-zinc-50 px-4 py-3 dark:bg-zinc-800/50">
+        <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{project.outcome}</p>
+      </div>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {project.tech.map((t) => (
+          <span key={t} className="text-xs text-zinc-500">{t}</span>
+        ))}
+      </div>
+    </motion.a>
   )
 }
 
-export const metadata = {
-  title: 'Projects',
-  description: 'Systems I\'ve built that serve thousands of users and solve real problems.',
+function SmallCard({ project, index }) {
+  return (
+    <motion.a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-4 rounded-xl border border-zinc-200 bg-white p-4 transition-all hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900/30 dark:hover:border-zinc-700"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
+    >
+      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800">
+        <Image src={project.logo} alt="" className="h-6 w-6 object-contain" unoptimized />
+      </div>
+      <div className="min-w-0 flex-1">
+        <h3 className="font-medium text-zinc-900 group-hover:text-primary dark:text-zinc-100 dark:group-hover:text-primary-400">
+          {project.name}
+        </h3>
+        <p className="truncate text-sm text-zinc-500">{project.description}</p>
+      </div>
+      <svg className="h-4 w-4 flex-shrink-0 text-zinc-400 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      </svg>
+    </motion.a>
+  )
 }
 
 export default function Projects() {
   return (
-    <SimpleLayout
-      title="Systems I've built that actually ship and scale."
-      intro="From AI-powered platforms analyzing thousands of medical records to investment tools connecting startups with investors&mdash;these are the projects where I've led teams, architected solutions, and delivered measurable business impact. Each one taught me something new about building software that matters."
-    >
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        {projects.map((project) => (
-          <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.logo}
-                alt=""
-                className="h-8 w-8"
-                unoptimized
-              />
-            </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
-            </h2>
-            <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
-            </p>
-          </Card>
-        ))}
-      </ul>
-    </SimpleLayout>
+    <div className="py-16 md:py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+
+        {/* Header - Simple */}
+        <ScrollReveal>
+          <h1 className="font-display text-3xl font-bold text-zinc-900 dark:text-zinc-100 sm:text-4xl">
+            Projects
+          </h1>
+          <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
+            14 projects shipped over 8 years. AI platforms, healthcare systems, fintech tools, and more. Here are the highlights.
+          </p>
+        </ScrollReveal>
+
+        {/* Stats Row */}
+        <ScrollReveal className="mt-8">
+          <div className="flex flex-wrap gap-6 text-sm">
+            <span className="text-zinc-500">
+              <strong className="text-zinc-900 dark:text-zinc-100">100K+</strong> users served
+            </span>
+            <span className="text-zinc-500">
+              <strong className="text-zinc-900 dark:text-zinc-100">$2M+</strong> processed monthly
+            </span>
+            <span className="text-zinc-500">
+              <strong className="text-zinc-900 dark:text-zinc-100">50+</strong> institutions
+            </span>
+          </div>
+        </ScrollReveal>
+
+        {/* Featured Projects */}
+        <div className="mt-12">
+          <h2 className="text-sm font-medium uppercase tracking-wider text-zinc-500">
+            Featured
+          </h2>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {featuredProjects.map((project, index) => (
+              <FeaturedCard key={project.name} project={project} index={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* Other Projects */}
+        <div className="mt-16">
+          <h2 className="text-sm font-medium uppercase tracking-wider text-zinc-500">
+            More projects
+          </h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {otherProjects.map((project, index) => (
+              <SmallCard key={project.name} project={project} index={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <ScrollReveal className="mt-16 text-center">
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Interested in working together?{' '}
+            <a
+              href="https://cal.com/abdullahmujahidali"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary hover:underline dark:text-primary-400"
+            >
+              Let&apos;s talk
+            </a>
+          </p>
+        </ScrollReveal>
+
+      </div>
+    </div>
   )
 }

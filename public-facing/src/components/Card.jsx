@@ -14,10 +14,14 @@ function ChevronRightIcon(props) {
   )
 }
 
-export function Card({ as: Component = 'div', className, children }) {
+export function Card({ as: Component = 'div', className, children, glass = false }) {
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start')}
+      className={clsx(
+        className,
+        'group relative flex flex-col items-start',
+        glass && 'rounded-2xl border border-zinc-200/50 bg-white/70 p-6 backdrop-blur-xl dark:border-zinc-700/50 dark:bg-zinc-900/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5'
+      )}
     >
       {children}
     </Component>
@@ -27,7 +31,7 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-gradient-to-br from-zinc-50 to-zinc-100 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 dark:from-zinc-800/50 dark:to-zinc-800/30 sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
@@ -56,10 +60,10 @@ Card.Cta = function CardCta({ children }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+      className="relative z-10 mt-4 flex items-center text-sm font-medium text-primary transition-colors group-hover:text-primary-end dark:text-primary-400"
     >
       {children}
-      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current transition-transform group-hover:translate-x-1" />
     </div>
   )
 }

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Banner - Abdullah Mujahid (Fixed)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      padding: 40px;
+      gap: 60px;
+    }
+
+    h2 {
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    .note {
+      color: #10B981;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .banner-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Instructions */
+    .instructions {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 24px 32px;
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      max-width: 700px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .instructions strong {
+      color: #6366F1;
+    }
+
+    /* Profile photo placeholder indicator */
+    .photo-zone {
+      position: absolute;
+      left: 40px;
+      bottom: -60px;
+      width: 160px;
+      height: 160px;
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    /* Banner - Fixed for Profile Photo */
+    .banner {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      /* Push content to the right to avoid profile photo */
+      padding: 0 100px 0 320px;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.04) 100%);
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .banner .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .banner .left {
+      max-width: 650px;
+    }
+
+    .banner .tagline {
+      font-size: 44px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.15;
+    }
+
+    .banner .tagline .gradient {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner .stats-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 20px;
+    }
+
+    .banner .mini-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .banner .mini-stat .num {
+      font-size: 26px;
+      font-weight: 700;
+      color: #6366F1;
+    }
+
+    .banner .mini-stat .label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .banner .right {
+      text-align: center;
+    }
+
+    .banner .cta-box {
+      padding: 24px 36px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 16px;
+    }
+
+    .banner .cta-label {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .banner .cta-link {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .banner .cta-link span {
+      color: #6366F1;
+    }
+
+    .banner .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%);
+    }
+
+    /* Alternative - Centered Layout */
+    .banner-centered {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .banner-centered::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 60%);
+    }
+
+    .banner-centered .content {
+      position: relative;
+      z-index: 1;
+      /* Shift slightly right to account for profile photo on left */
+      margin-left: 100px;
+    }
+
+    .banner-centered .tagline {
+      font-size: 48px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .banner-centered .tagline .gradient {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner-centered .subtitle {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 12px;
+    }
+
+    .banner-centered .bottom-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .banner-centered .stat-pill {
+      padding: 8px 18px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 100px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .banner-centered .stat-pill strong {
+      color: #6366F1;
+      font-weight: 700;
+    }
+
+    .banner-centered .cta-pill {
+      padding: 10px 22px;
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      border-radius: 100px;
+      font-size: 14px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .banner-centered .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%);
+    }
+
+    /* Right-aligned version */
+    .banner-right {
+      width: 1584px;
+      height: 396px;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 120px;
+    }
+
+    .banner-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(99, 102, 241, 0.12) 0%, transparent 50%);
+    }
+
+    .banner-right .content {
+      position: relative;
+      z-index: 1;
+      text-align: right;
+      max-width: 900px;
+    }
+
+    .banner-right .tagline {
+      font-size: 46px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.15;
+    }
+
+    .banner-right .tagline .gradient {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner-right .stats-cta-row {
+      display: flex;
+      gap: 24px;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .banner-right .stats {
+      display: flex;
+      gap: 24px;
+    }
+
+    .banner-right .mini-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .banner-right .mini-stat .num {
+      font-size: 26px;
+      font-weight: 700;
+      color: #6366F1;
+    }
+
+    .banner-right .mini-stat .label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .banner-right .divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .banner-right .cta-box {
+      padding: 16px 28px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .banner-right .cta-label {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+
+    .banner-right .cta-link {
+      font-size: 15px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .banner-right .cta-link span {
+      color: #6366F1;
+    }
+
+    .banner-right .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instructions">
+    <strong>Fixed versions:</strong> Content is positioned to avoid the LinkedIn profile photo overlap.<br>
+    Screenshot at 100% zoom. Dimensions: 1584 x 396 px
+  </div>
+
+  <!-- Option 1: Left content shifted right -->
+  <div class="banner-container">
+    <h2>Option 1 — Two Column (Profile Photo Safe)</h2>
+    <div class="note">✓ Content avoids profile photo area</div>
+    <div class="banner">
+      <div class="content">
+        <div class="left">
+          <div class="tagline">
+            Building <span class="gradient">Teams</span> That Ship<br>
+            & <span class="gradient">Systems</span> That Scale
+          </div>
+          <div class="stats-row">
+            <div class="mini-stat">
+              <span class="num">8+</span>
+              <span class="label">Years</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">389+</span>
+              <span class="label">Citations</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">100K+</span>
+              <span class="label">Users</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="cta-box">
+            <div class="cta-label">Let's Talk</div>
+            <div class="cta-link"><span>cal.com/</span>abdullahmujahidali</div>
+          </div>
+        </div>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+  <!-- Option 2: Center-aligned -->
+  <div class="banner-container">
+    <h2>Option 2 — Centered (Offset Right)</h2>
+    <div class="note">✓ Centered but shifted to avoid photo</div>
+    <div class="banner-centered">
+      <div class="content">
+        <div class="tagline">
+          Building <span class="gradient">Teams</span> That Ship<br>
+          & <span class="gradient">Systems</span> That Scale
+        </div>
+        <div class="subtitle">Engineering Manager & Tech Lead</div>
+        <div class="bottom-row">
+          <span class="stat-pill"><strong>8+</strong> Years</span>
+          <span class="stat-pill"><strong>389+</strong> Citations</span>
+          <span class="stat-pill"><strong>100K+</strong> Users</span>
+          <span class="cta-pill">📅 cal.com/abdullahmujahidali</span>
+        </div>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+  <!-- Option 3: Right-aligned (RECOMMENDED) -->
+  <div class="banner-container">
+    <h2>Option 3 — Right Aligned (Recommended)</h2>
+    <div class="note">✓ All content on right, nothing hidden by photo</div>
+    <div class="banner-right">
+      <div class="content">
+        <div class="tagline">
+          Building <span class="gradient">Teams</span> That Ship<br>
+          & <span class="gradient">Systems</span> That Scale
+        </div>
+        <div class="stats-cta-row">
+          <div class="stats">
+            <div class="mini-stat">
+              <span class="num">8+</span>
+              <span class="label">Years</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">389+</span>
+              <span class="label">Citations</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">100K+</span>
+              <span class="label">Users</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="cta-box">
+            <div class="cta-label">Let's Talk</div>
+            <div class="cta-link"><span>cal.com/</span>abdullahmujahidali</div>
+          </div>
+        </div>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+</body>
+</html>
