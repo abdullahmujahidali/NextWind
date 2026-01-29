@@ -26,10 +26,7 @@ export function Research() {
         />
 
         <ScrollReveal>
-          <motion.a
-            href={publication.link}
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.div
             className="group relative block overflow-hidden rounded-2xl border border-zinc-200 bg-white p-8 transition-all hover:border-primary/30 hover:shadow-xl dark:border-zinc-700 dark:bg-zinc-800/50 dark:hover:border-primary/30"
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -88,17 +85,21 @@ export function Research() {
                 )}
 
                 <div className="mt-6 flex items-center gap-4">
-                  <span className="inline-flex items-center text-sm font-medium text-primary transition-transform group-hover:translate-x-1 dark:text-primary-400">
+                  <a
+                    href={publication.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm font-medium text-primary transition-transform hover:translate-x-1 dark:text-primary-400"
+                  >
                     Read Paper
                     <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                  </span>
+                  </a>
                   <a
                     href="https://scholar.google.com/citations?user=maVlLj4AAAAJ&hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
                     className="inline-flex items-center text-sm font-medium text-zinc-500 transition-colors hover:text-primary dark:text-zinc-400"
                   >
                     <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -112,7 +113,7 @@ export function Research() {
 
             {/* Hover effect */}
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/5 to-primary-end/5 opacity-0 transition-opacity group-hover:opacity-100" />
-          </motion.a>
+          </motion.div>
         </ScrollReveal>
       </div>
     </section>
