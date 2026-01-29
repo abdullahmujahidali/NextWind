@@ -39,7 +39,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    "I'm Abdullah Mujahid. I reside in Lahore, Pakistan, where I engineer tomorrow's digital solutions.",
+    "I'm Abdullah Mujahid. 8+ years turning ambitious ideas into scalable systems across healthcare, fintech, and AI.",
 }
 
 export default function About() {
@@ -58,20 +58,21 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I create high-performance systems that drive innovation and efficiency
+            From farm APIs to AI architectures&mdash;I solve problems that matter
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I&apos;m Abdullah Mujahid, a Senior Full Stack Software Engineer with a passion for building scalable, high-performance applications. With extensive experience in Django, FastAPI, React.js, and Next.js, I specialize in crafting seamless digital experiences, optimizing backend processes, and integrating cutting-edge technologies like LLMs, AI-driven automation, and Web3.
-
+              My journey started in 2016 building a farm management system that helped 600+ agricultural businesses in Ireland. That first project taught me something crucial: technology is only valuable when it genuinely solves someone&apos;s problem. Eight years later, I still build with that mindset&mdash;except now the problems involve multi-LLM architectures, real-time voice AI, and systems serving 100K+ daily users.
             </p>
             <p>
-              My career spans diverse industries, from AI-powered SaaS platforms and regulatory reporting solutions to decentralized finance (DeFi) and NFT marketplaces. I have led major platform automation initiatives, built event-driven architectures, and developed ETL pipelines for large-scale data processing. I thrive in fast-paced environments, solving complex challenges with precision and innovation
+              The path between those two points took me through Lebanon, New York, and the UK, working with teams that ranged from scrappy startups to established enterprises. I&apos;ve built AI systems that analyze 10,000+ medical records daily with 87% accuracy, architected platforms that passed rigorous financial regulatory audits, and pioneered voice AI agents with speaker diarization achieving 92%+ accuracy. Each project added new tools to my belt&mdash;Python, Django, React, FastAPI, LangGraph, AWS Bedrock&mdash;but more importantly, each taught me how to translate complex business needs into elegant technical solutions.
             </p>
             <p>
-              Beyond development, I have led teams, optimized system architectures, and managed cloud deployments across AWS, Vercel, and Heroku. Whether it&apos;s designing microservices, enhancing DevOps pipelines, or implementing AI-driven workflows, I am committed to delivering impactful, future-ready solutions.
+              What I&apos;ve learned is that the best engineers aren&apos;t just coders&mdash;they&apos;re translators. They bridge the gap between what founders envision and what technology can deliver. That&apos;s why I&apos;ve consistently moved into leadership roles, mentoring teams, establishing coding standards that cut bug rates by 35-45%, and building cultures where shipping quality code is the norm, not the exception.
             </p>
-
+            <p>
+              Today, I&apos;m focused on the intersection of AI and practical business applications. Whether it&apos;s building investor intelligence platforms, HIPAA-compliant medical systems, or regulatory reporting tools&mdash;I&apos;m drawn to work that has real impact. If you&apos;re building something that matters, I&apos;d love to hear about it.
+            </p>
           </div>
         </div>
         <div className="lg:pl-20">

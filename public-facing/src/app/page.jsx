@@ -10,10 +10,11 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
+import logoAstelVentures from '@/images/logos/astelventures-1.png'
+import logoSparignite from '@/images/logos/regnxt.png'
 import logoCarteBlanche from '@/images/logos/carteblanche.svg'
 import logoCrocuszone from '@/images/logos/download.png'
-import logoFacebook from '@/images/logos/facebook.svg'
+import logoDeswot from '@/images/logos/cosmos.svg'
 import logoGlobalgroupone from '@/images/logos/globalGroupOne.svg'
 import logoVadaInnovation from '@/images/logos/vadainnovation.svg'
 import { formatDate } from '@/lib/formatDate'
@@ -134,52 +135,59 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Vada Innovation',
-      title: 'Technical Lead | Project Manager',
-      logo: logoVadaInnovation,
-      start: '2023',
+      company: 'Astel Ventures',
+      title: 'Senior Software Engineer',
+      logo: logoAstelVentures,
+      start: '2025',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
+    },
+    {
+      company: 'Sparignite',
+      title: 'Engineering Manager | Tech Lead',
+      logo: logoSparignite,
+      start: '2024',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
+      company: 'Vada Innovation',
+      title: 'Technical Lead',
+      logo: logoVadaInnovation,
+      start: '2024',
+      end: '2025',
+    },
+    {
+      company: 'Crocus Zone',
+      title: 'Senior Software Engineer',
+      logo: logoCrocuszone,
+      start: '2023',
+      end: '2024',
     },
     {
       company: 'Carte Blanche',
       title: 'Senior Software Engineer',
       logo: logoCarteBlanche,
       start: '2021',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Crocus Zone',
-      title: 'Software Engineer',
-      logo: logoCrocuszone, // You may want to replace with an appropriate logo
-      start: '2022',
-      end: '2024',
-    },
-    {
-      company: 'Global Group One',
-      title: 'Development Lead',
-      logo: logoGlobalgroupone,
-      start: '2023',
       end: '2023',
     },
     {
-      company: 'BMJ Consultants',
-      title: 'Backend Developer',
-      logo: logoAirbnb,
-      start: '2020',
+      company: 'Global Group One',
+      title: 'Software Engineer',
+      logo: logoGlobalgroupone,
+      start: '2019',
       end: '2021',
     },
     {
       company: 'deSwot',
-      title: 'Full Stack Software Engineer',
-      logo: logoFacebook,
-      start: '2020',
-      end: '2021',
+      title: 'Full Stack Engineer',
+      logo: logoDeswot,
+      start: '2017',
+      end: '2019',
     },
   ]
 
@@ -223,7 +231,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://drive.google.com/file/d/1jcxEO3B5qw75AxWAvHevVKLREE1bKwv1/view?usp=sharing"
+        href="/Abdullah-Mujahid-Resume.pdf"
         variant="secondary"
         className="group mt-6 w-full"
       >
@@ -244,22 +252,22 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Senior Software engineer.
+            I build systems that scale startups into success stories.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Abdullah Mujahid, a Senior Full Stack Engineer with expertise in building scalable applications across diverse industries. With over 5 years of experience, I specialize in Django, React, FastAPI, and cloud infrastructure on AWS.
+            Eight years ago, I wrote my first production API for a farm management system in Ireland. Today, I architect AI-powered platforms that process millions of data points and serve thousands of users daily. Along the way, I&apos;ve built everything from HIPAA-compliant medical systems to real-time voice AI agents.
           </p>
 
           <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;ve led development for financial platforms, AI-powered veterinary systems, and blockchain applications, implementing microservices architectures, data pipelines, and innovative AI solutions. My technical toolkit includes Python, JavaScript, Next.js, PostgreSQL, Redis, Docker, and various AWS services.
+            What drives me isn&apos;t just clean code&mdash;it&apos;s the moment when a founder sees their MVP transform into a platform that actually changes how their industry works. I&apos;ve led teams through complete architecture overhauls, pioneered AI initiatives before they were trendy, and consistently turned &quot;this can&apos;t be done&quot; into shipped features.
           </p>
 
           <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-            Beyond coding, I excel at architectural design, team leadership, and translating business requirements into technical solutions. Currently serving as Technical Lead at Vada Innovation and Senior Engineer at Carte Blanche, I focus on creating high-performance applications that deliver measurable business value through thoughtful architecture and clean, maintainable code.
+            Currently, I&apos;m wearing two hats: building an AI-powered investment intelligence platform at Astel Ventures, and leading the engineering team at Sparignite&mdash;a Belgium-based company where I&apos;m driving RegNxt, a regulatory reporting platform that&apos;s transforming how financial institutions handle compliance. I designed the architecture, led the UI/UX, manage a team of engineers, and own everything from code reviews to production deployments.
           </p>
 
           <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m passionate about leveraging emerging technologies like LLMs and blockchain to solve complex problems, and I&apos;m always open to discussing new opportunities for collaboration.
+            If you&apos;re building something ambitious and need someone who can translate vision into scalable reality&mdash;let&apos;s talk.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

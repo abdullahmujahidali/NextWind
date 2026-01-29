@@ -7,19 +7,41 @@ import logoHelioStream from '@/images/logos/chimera.svg'
 import logoAnimaginary from '@/images/logos/defispot.svg'
 import logoGladiatorFinance from '@/images/logos/gladiatorFinance.svg'
 import logoOpenShuttle from '@/images/logos/hirecinch.svg'
-import logoJupiter from '@/images/logos/jupiter.svg'
 import logoLKSY from '@/images/logos/lksy.png'
 import logoCosmos from '@/images/logos/logo-swissblock.svg'
 import logoPublicEditor from '@/images/logos/pe.png'
-import logoQuickers from '@/images/logos/quickers.png'
 import logoRegnxt from '@/images/logos/regnxt.png'
 import logoVetAi from '@/images/logos/vetai.svg'
+import logoAira from '@/images/logos/astelventures-1.png'
+import logoMitra from '@/images/logos/mitra-ai.svg'
+import logoSiParadigm from '@/images/logos/siParadigm.svg'
+import logoDeals4Autos from '@/images/logos/airbnb.svg'
 
 const projects = [
   {
+    name: 'AIRA - Investor Intelligence Platform',
+    description:
+      'Architected an AI-powered investor intelligence platform from MVP to production. Features multi-LLM architecture with per-tenant configuration for intelligent deal analysis, pitch deck extraction, and personalized outreach. Built advanced Elasticsearch-powered investor search reducing discovery time by 60%.',
+    link: {
+      href: 'https://aira.astelventures.com',
+      label: 'aira.astelventures.com',
+    },
+    logo: logoAira,
+  },
+  {
+    name: 'Mitra AI - Voice Relationship Mentor',
+    description:
+      'Built real-time voice AI agents using Python and LiveKit, integrating GPT-4, Speechmatics/Deepgram STT, and ElevenLabs TTS. Implemented speaker diarization with 92%+ accuracy for couples sessions, with HIPAA-compliant AES-256-GCM encryption for all transcripts.',
+    link: {
+      href: '#',
+      label: 'mitra.ai',
+    },
+    logo: logoMitra,
+  },
+  {
     name: 'Veterinary AI',
     description:
-      'A comprehensive SaaS platform for veterinary practices using microservices. Features include a doctor-facing admin portal for prompt engineering and AI interaction, alongside a public-facing interface for pet owners. Implements custom LLM solutions for analyzing medical records and uses LangGraph for orchestrating AI workflows.',
+      'Led technical vision for a veterinary SaaS platform reducing diagnostic time by 40% for 50+ practices. Developed custom LLM solutions analyzing 10,000+ medical records daily with 87% accuracy. Integrated LangGraph for AI workflows and Pinecone for vector storage.',
     link: {
       href: 'https://app.staging.veterinaryai.com/',
       blank: true,
@@ -28,32 +50,46 @@ const projects = [
     logo: logoVetAi,
   },
   {
-    name: 'RegNxt',
+    name: 'RegNxt - Regulatory Reporting',
     description:
-      'A scalable regulatory reporting platform for financial institutions. Features data versioning with comprehensive audit trails and visualization tools for complex data relationships. Implemented clean architecture patterns and built a responsive UI with advanced filtering capabilities.',
+      'As Engineering Manager at Sparignite, I designed and built this regulatory reporting platform from the ground up. Led UI/UX design, architected the backend, managed DevOps, and lead a team of 6 engineers. Platform reduced compliance reporting time by 40% for financial institutions and passed all regulatory audits.',
     link: { href: 'https://www.regnxt.eu', label: 'regnxt.eu' },
     logo: logoRegnxt,
   },
   {
+    name: 'SI Paradigm - Medical Lab Platform',
+    description:
+      'Led 7 developers delivering a HIPAA-compliant laboratory management platform reducing lab processing time by 30%. Integrated with 5 third-party laboratory systems. Redis caching improved response times by 45% during peak hours. Achieved 100% client retention.',
+    link: { href: '#', label: 'siparadigm.com' },
+    logo: logoSiParadigm,
+  },
+  {
     name: 'Public Editor',
     description:
-      'Developed and automated the Public Editor platform with robust authentication and payment integrations. Integrated Anthropic\'s Claude 3.5 for advanced automation, NLP solutions to analyze content, and tools for scraping articles.',
+      'Architected secure MFA authentication improving account security by 65%. Integrated Anthropic Claude 3.5 reducing manual content review by 75%. Built NLP solutions processing 10,000+ news articles daily with 92% accuracy. Amazon SES achieved 99.8% email delivery.',
     link: { href: '#', label: 'publiceditor.io' },
     logo: logoPublicEditor,
   },
   {
-    name: 'LKSY',
+    name: 'Hirecinch - ATS Platform',
     description:
-      'An educational platform for JILAEE that allows users to complete coding tasks using Scratch. Built with Django and hosted on Heroku, with tasks and submissions managed through AWS S3 and tested with the Whisker framework on AWS Lambda.',
-    link: { href: 'https://www.jilaee.org/', label: 'jilaee.org' },
-    logo: logoLKSY,
-  },
-  {
-    name: 'Hirecinch',
-    description:
-      'An intuitive applicant tracking system with features for both recruiters and candidates. Led a major refactoring project for scalability, implemented a billing system with Stripe\'s API, integrated AI workflows, and created a custom career page generator.',
+      'Led product strategy and team of 4 developers through major refactoring. Resume Parser microservice automated candidate extraction with 85% accuracy, saving recruiters 20+ hours weekly. Custom career pages improved application completion by 45%. Stripe integration increased revenue collection by 30%.',
     link: { href: 'https://hirecinch.com/', label: 'hirecinch.com' },
     logo: logoOpenShuttle,
+  },
+  {
+    name: 'Deals 4 Autos - Car BDC Platform',
+    description:
+      'Led transformation from PHP to React/Django architecture increasing dealership efficiency by 35%. Managed 5 developers while serving 40+ active dealerships. Payment system processing $2M+ monthly with 99.8% reliability. AWS migration improved uptime from 94% to 99.5%.',
+    link: { href: '#', label: 'deals4autos.com' },
+    logo: logoDeals4Autos,
+  },
+  {
+    name: 'LKSY - Educational Platform',
+    description:
+      'Built interactive learning platform enabling 1,500+ students to complete Scratch coding exercises. AWS S3 handled 20,000+ monthly submissions with 99.9% availability. Whisker framework on Lambda provided immediate feedback, improving learning outcomes by 30%.',
+    link: { href: 'https://www.jilaee.org/', label: 'jilaee.org' },
+    logo: logoLKSY,
   },
   {
     name: 'Gladiator Finance',
@@ -68,14 +104,21 @@ const projects = [
   {
     name: 'Defispot',
     description:
-      'A multi-chain decentralized exchange that allows users to swap, lend and manage liquidity without KYC. Developed essential backend wallet APIs using exchange.js to power a versatile multi-chain wallet for Ethereum, Bitcoin, and other cryptocurrencies.',
+      'A multi-chain decentralized exchange for swapping, lending and liquidity management without KYC. Developed backend wallet APIs using exchange.js powering a versatile multi-chain wallet for Ethereum, Bitcoin, and other cryptocurrencies.',
     link: { href: 'https://www.defispot.com/', label: 'defispot.com' },
     logo: logoAnimaginary,
   },
   {
-    name: 'Arisbe',
+    name: 'Swissblock Exchange',
     description:
-      'An e-learning platform using Django and React.js, hosted on AWS. Features virtual classes with Zoom integration, quiz creation tools, and assessment capabilities. Designed the architecture and implemented custom front-end components.',
+      'A unique centralized exchange with innovative features like paper trading. Gasless nature with comprehensive trading options including Future, Spot, and Margin trading.',
+    link: { href: 'https://swissblock.net/', label: 'swissblock.net' },
+    logo: logoCosmos,
+  },
+  {
+    name: 'Arisbe - E-Learning',
+    description:
+      'E-learning platform with Django and React.js hosted on AWS. Features virtual classes with Zoom integration, quiz creation tools, and assessment capabilities.',
     link: {
       href: 'https://arisbe.org/',
       label: 'arisbe.org',
@@ -83,42 +126,11 @@ const projects = [
     logo: logoArisbe,
   },
   {
-    name: 'Chimera',
+    name: 'Chimera - NFT Game',
     description:
-      'Chimeras is an exciting NFT-based game set in a mystical land of floating islands and magical creatures. Look for resources, create artefacts and trade. Bring prosperity to your land.',
+      'An NFT-based game set in a mystical land of floating islands and magical creatures. Resource gathering, artefact creation, and trading mechanics.',
     link: { href: 'https://chimeras.io/', label: 'chimeras.io' },
     logo: logoHelioStream,
-  },
-  {
-    name: 'Swissblock',
-    description:
-      'Swissblock is a unique centralized exchange resembling platforms like FTX but with innovative features like paper trading. A standout feature of this exchange is its gasless nature, offering a range of trading options, including Future, Spot, and Margin trading.',
-    link: { href: 'https://swissblock.net/', label: 'swissblock.net' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'Hirecinch',
-    description:
-      'The most intuitive & affordable Applicant Tracking System!. All in one hiring software that enables you to attract quality applicants & evaluate them collaboratively so you can find the right fit for your team.',
-    link: { href: 'https://hirecinch.com/', label: 'hirecinch.com' },
-    logo: logoOpenShuttle,
-  },
-  {
-    name: 'Quickers',
-    description:
-      'Quickes is a e-commerce store for grocery in London, United Kingdom. It is a one stop shop for all your grocery needs. Offers a wide range of products from fresh fruits and vegetables to packaged goods.',
-    link: { href: 'http://quickers.uk/', label: 'quickers.uk' },
-    logo: logoQuickers,
-  },
-  {
-    name: 'Jupiterscript',
-    description:
-      'A comprehensive solution for easily working with templates, scripts, and implementing them on routers.',
-    link: {
-      href: 'https://app.jupiterscript.com/',
-      label: 'app.jupiterscript.com',
-    },
-    logo: logoJupiter,
   },
 ]
 function LinkIcon(props) {
@@ -134,14 +146,14 @@ function LinkIcon(props) {
 
 export const metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Systems I\'ve built that serve thousands of users and solve real problems.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Systems I've built that actually ship and scale."
+      intro="From AI-powered platforms analyzing thousands of medical records to investment tools connecting startups with investors&mdash;these are the projects where I've led teams, architected solutions, and delivered measurable business impact. Each one taught me something new about building software that matters."
     >
       <ul
         role="list"
