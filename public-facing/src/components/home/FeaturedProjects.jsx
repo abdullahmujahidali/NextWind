@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: 'AIRA',
-    role: 'Lead Architect',
+    role: 'Senior Architect',
     oneLiner: 'AI-powered investor intelligence',
     outcome: 'Multi-LLM system processing millions of data points',
     tech: ['Next.js', 'LangChain', 'RAG', 'Pinecone'],
