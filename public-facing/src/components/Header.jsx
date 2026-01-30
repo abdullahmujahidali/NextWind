@@ -73,6 +73,7 @@ function MoonIcon(props) {
 const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Projects', href: '/projects' },
+  { name: 'Goodies', href: '/goodies' },
   { name: 'Articles', href: '/articles' },
 ]
 
