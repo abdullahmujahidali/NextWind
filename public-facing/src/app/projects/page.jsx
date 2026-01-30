@@ -23,7 +23,7 @@ const featuredProjects = [
   {
     name: 'AIRA',
     tagline: 'AI-powered investor intelligence',
-    role: 'Lead Architect',
+    role: 'Senior Architect',
     outcome: 'Multi-LLM system processing millions of data points, 60% faster investor discovery',
     link: 'https://aira.astelventures.com',
     logo: logoAira,
