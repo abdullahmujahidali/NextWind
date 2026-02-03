@@ -4,7 +4,7 @@ import {
   WhatIDo,
   FeaturedProjects,
   TechStack,
-  Timeline,
+  // Timeline,
   Research,
   Certifications,
   LatestArticles,
@@ -42,7 +42,7 @@ export default async function Home() {
       <SectionDivider />
 
       {/* Career Timeline */}
-      <Timeline />
+      {/* <Timeline /> */}
 
       <SectionDivider />
 
