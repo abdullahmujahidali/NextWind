@@ -18,6 +18,7 @@ import logoAira from '@/images/logos/astelventures-1.png'
 import logoMitra from '@/images/logos/mitra-ai.svg'
 import logoSiParadigm from '@/images/logos/siParadigm.svg'
 import logoDeals4Autos from '@/images/logos/airbnb.svg'
+import logoMintvo from '@/images/logos/mintvo.svg'
 
 const featuredProjects = [
   {
@@ -55,6 +56,15 @@ const featuredProjects = [
     link: 'https://app.staging.veterinaryai.com/',
     logo: logoVetAi,
     tech: ['LangGraph', 'Pinecone', 'FastAPI', 'React'],
+  },
+  {
+    name: 'Mintvo',
+    tagline: 'Modern invoicing for freelancers and small agencies',
+    role: 'Technical Architect',
+    outcome: 'Full-stack SaaS — designed and shipped end-to-end, from schema to deployment',
+    link: 'https://mintvo.app',
+    logo: logoMintvo,
+    tech: ['Next.js', 'FastAPI', 'Supabase', 'TypeScript'],
   },
 ]
 
@@ -205,7 +215,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
-            14 projects shipped over 8 years. AI platforms, healthcare systems, fintech tools, and more. Here are the highlights.
+            15 projects shipped over 8 years. AI platforms, healthcare systems, fintech tools, and more. Here are the highlights.
           </p>
         </ScrollReveal>
 
