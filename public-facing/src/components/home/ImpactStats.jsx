@@ -1,27 +1,26 @@
 'use client'
 
 import { StatCard } from '@/components/ui/AnimatedCounter'
-import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/ScrollReveal'
+import { StaggerContainer, StaggerItem } from '@/components/ui/ScrollReveal'
+import {
+  yearsOfExperience,
+  RESEARCH_CITATIONS,
+  PROJECTS_SHIPPED,
+} from '@/lib/siteFacts'
 
 const stats = [
-  { value: 8, suffix: '+', label: 'Years Experience' },
+  { value: yearsOfExperience, suffix: '+', label: 'Years Experience' },
   { value: 100, suffix: 'K+', label: 'Users Served' },
-  { value: 389, suffix: '+', label: 'Research Citations' },
-  { value: 15, suffix: '+', label: 'Projects Shipped' },
+  { value: RESEARCH_CITATIONS, suffix: '+', label: 'Research Citations' },
+  { value: PROJECTS_SHIPPED, suffix: '+', label: 'Projects Shipped' },
 ]
 
 export function ImpactStats() {
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal className="text-center">
-          <span className="font-mono text-sm font-medium uppercase tracking-wider text-primary dark:text-primary-400">
-            Impact & Results
-          </span>
-        </ScrollReveal>
-
         <StaggerContainer
-          className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4"
+          className="grid grid-cols-2 gap-8 md:grid-cols-4"
           staggerDelay={0.15}
         >
           {stats.map((stat, index) => (

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
+import { RESEARCH_CITATIONS } from '@/lib/siteFacts'
 
 const publication = {
   title: 'Real-Time Hand Gesture Recognition Based on Deep Learning YOLOv3 Model',
@@ -20,9 +21,8 @@ export function Research() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Research & Publications"
-          title="Academic Contributions"
-          description="Peer-reviewed research contributing to the advancement of AI and healthcare technology."
+          title="Research & publications"
+          description={`Peer-reviewed work in AI and healthcare, cited ${RESEARCH_CITATIONS}+ times.`}
         />
 
         <ScrollReveal>

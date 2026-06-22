@@ -102,9 +102,7 @@ export function Certifications() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Certifications"
-          title="Professional Credentials"
-          description="Continuous learning and industry-recognized certifications."
+          title="Certifications"
         />
 
         <StaggerContainer

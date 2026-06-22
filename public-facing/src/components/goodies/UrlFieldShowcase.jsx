@@ -9,7 +9,7 @@ export function UrlFieldShowcase() {
   return (
     <section>
       <div className="mb-10">
-        <div className="inline-block rounded-lg bg-indigo-500/10 px-3 py-1 text-sm font-medium text-indigo-600 dark:text-indigo-400">
+        <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary-400">
           Interactive Tool
         </div>
         <h2 className="mt-4 text-3xl font-bold text-zinc-900 dark:text-white">
@@ -20,7 +20,7 @@ export function UrlFieldShowcase() {
         </p>
       </div>
 
-      <div className="relative rounded-2xl bg-gradient-to-b from-indigo-500 to-purple-600 p-[1px]">
+      <div className="relative rounded-2xl bg-primary p-[1px]">
         <div className="rounded-2xl bg-white dark:bg-zinc-900">
           {/* Header bar */}
           <div className="flex items-center justify-between border-b border-zinc-100 px-6 py-4 dark:border-zinc-800">

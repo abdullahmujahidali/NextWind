@@ -4,7 +4,6 @@ import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useTheme } from 'next-themes'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -31,36 +30,6 @@ function MenuIcon(props) {
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
         d="M4 6h16M4 12h16M4 18h16"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function SunIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function MoonIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-        fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -174,27 +143,6 @@ function NavItem({ href, children }) {
   )
 }
 
-function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  return (
-    <button
-      type="button"
-      aria-label={mounted ? `Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} theme` : 'Toggle theme'}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-zinc-500 ring-1 ring-zinc-900/5 backdrop-blur transition hover:text-zinc-900 dark:bg-zinc-800/90 dark:text-zinc-400 dark:ring-white/10 dark:hover:text-white"
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-    >
-      <SunIcon className="h-5 w-5 dark:hidden" />
-      <MoonIcon className="hidden h-5 w-5 dark:block" />
-    </button>
-  )
-}
-
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -258,9 +206,6 @@ export function Header() {
               </svg>
               Book a Call
             </a>
-
-            {/* Theme Toggle */}
-            <ThemeToggle />
 
             {/* Mobile Menu */}
             <div className="md:hidden">

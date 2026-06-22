@@ -7,8 +7,8 @@ export function GoodiesHero() {
   return (
     <div className="relative overflow-hidden pt-16 sm:pt-20">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 via-transparent to-transparent dark:from-indigo-950/20" />
-        <div className="absolute left-1/2 top-0 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-indigo-400/20 via-violet-400/20 to-purple-400/20 blur-3xl dark:from-indigo-500/10 dark:via-violet-500/10 dark:to-purple-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="absolute left-1/2 top-0 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
       </div>
 
       <Container>
@@ -22,11 +22,11 @@ export function GoodiesHero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-medium text-indigo-600 ring-1 ring-inset ring-indigo-500/20 dark:text-indigo-400 dark:ring-indigo-400/20"
+            className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary-400 ring-1 ring-inset ring-primary/20"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
             </span>
             Free &amp; Open Source
           </motion.div>
@@ -38,7 +38,7 @@ export function GoodiesHero() {
             className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl"
           >
             Goodies{' '}
-            <span className="bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="text-primary-400">
               &amp; Tools
             </span>
           </motion.h1>

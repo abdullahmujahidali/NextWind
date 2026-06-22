@@ -7,7 +7,7 @@ const variantStyles = {
   secondary:
     'bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70',
   gradient:
-    'bg-gradient-to-r from-primary to-primary-end font-semibold text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:brightness-110 active:brightness-95 transition-all duration-200',
+    'bg-primary font-semibold text-white shadow-lg shadow-primary/20 hover:bg-primary-600 active:bg-primary-700 transition-colors duration-200',
   ghost:
     'bg-transparent font-medium text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800',
   outline:

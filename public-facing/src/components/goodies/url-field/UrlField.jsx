@@ -87,7 +87,7 @@ export default function UrlField({
         className={clsx(
           'flex items-center gap-3 rounded-xl border-2 bg-zinc-50 px-4 py-4 shadow-sm transition-all dark:bg-zinc-800/50',
           isFocused
-            ? 'border-indigo-500 ring-4 ring-indigo-500/10 dark:ring-indigo-500/20'
+            ? 'border-primary ring-4 ring-primary/15'
             : 'border-zinc-200 hover:border-zinc-300 dark:border-zinc-700 dark:hover:border-zinc-600'
         )}
       >

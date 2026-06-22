@@ -66,9 +66,8 @@ export function LatestArticles({ articles = [] }) {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Latest Articles"
-          title="Thoughts & Insights"
-          description="Technical deep-dives, lessons learned, and perspectives on software engineering."
+          title="Writing"
+          description="Technical deep-dives on Python, Django, and the things I learn shipping software."
         />
 
         <StaggerContainer

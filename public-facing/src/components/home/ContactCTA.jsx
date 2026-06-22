@@ -37,9 +37,9 @@ export function ContactCTA() {
           </span>
 
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Ready to build something{' '}
+            Have something{' '}
             <span className="relative">
-              amazing
+              to ship
               <motion.span
                 className="absolute -bottom-2 left-0 h-1 w-full bg-white/50"
                 initial={{ scaleX: 0 }}
@@ -52,9 +52,9 @@ export function ContactCTA() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
-            Whether you&apos;re looking for a senior engineer to lead your next project,
-            need help scaling your engineering team, or want to explore AI-powered solutions
-            &mdash; I&apos;d love to hear from you.
+            I take on engineering leadership, AI and LLM builds, and full-stack work
+            &mdash; from a single hard problem to a team that needs running. Tell me what
+            you&apos;re building.
           </p>
 
           <motion.div

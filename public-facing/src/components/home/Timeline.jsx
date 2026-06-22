@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
+import { yearsOfExperience } from '@/lib/siteFacts'
 
 import logoAstelVentures from '@/images/logos/astelventures-1.png'
 import logoSparignite from '@/images/logos/regnxt.png'
@@ -82,7 +83,7 @@ export function Timeline() {
             Career Journey
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
-            8 years, 7 companies, 1 mission
+            {yearsOfExperience} years, 7 companies, 1 mission
           </h2>
           <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
             Building systems that matter and teams that ship.

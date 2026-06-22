@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
+import { yearsOfExperience } from '@/lib/siteFacts'
 
 const techStack = {
   'Frontend': ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Redux'],
@@ -48,9 +49,8 @@ export function TechStack() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Skills & Expertise"
-          title="Technical & Leadership Toolkit"
-          description="8+ years of hands-on engineering combined with proven leadership experience."
+          title="What I build with"
+          description={`${yearsOfExperience} years of hands-on engineering, plus the teams and process around it.`}
         />
 
         <div className="grid gap-8 lg:grid-cols-2">

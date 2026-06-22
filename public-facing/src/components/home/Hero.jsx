@@ -1,10 +1,10 @@
 'use client'
 
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { RotatingText } from '@/components/ui/TypewriterText'
 import { StaticGradientBackground } from '@/components/ui/GradientBackground'
 import { Button } from '@/components/Button'
+import { yearsOfExperience, PROJECTS_SHIPPED } from '@/lib/siteFacts'
 import {
   GitHubIcon,
   LinkedInIcon,
@@ -15,8 +15,10 @@ import {
 const roles = [
   'Engineering Lead',
   'Engineering Manager',
+  'Forward Deployed Engineer',
   'AI/LLM Architect',
   'Tech Lead',
+  'Technical Product Manager',
 ]
 
 function SocialLink({ icon: Icon, href, label }) {
@@ -60,7 +62,7 @@ export function Hero() {
 
           <h1 className="font-display text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="block">Hi, I&apos;m</span>
-            <span className="mt-2 block bg-gradient-to-r from-primary to-primary-end bg-clip-text text-transparent">
+            <span className="mt-2 block text-zinc-900 dark:text-zinc-100">
               Abdullah Mujahid
             </span>
           </h1>
@@ -77,7 +79,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mx-auto mt-8 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400"
           >
-            I build systems that scale startups into success stories. 8+ years turning ambitious ideas into production systems that serve thousands of users daily.
+            Engineering Manager and Tech Lead. {PROJECTS_SHIPPED} production systems shipped over {yearsOfExperience} years &mdash; across AI, AgTech, EduTech, fintech, and healthcare. From 3D feed-measurement to HIPAA-compliant clinical platforms.
           </motion.p>
 
           <motion.div
@@ -132,11 +134,10 @@ export function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="flex flex-col items-center text-zinc-400"
+          animate={{ opacity: [0.35, 0.8, 0.35] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          className="flex flex-col items-center text-zinc-500"
         >
-          <span className="mb-2 text-xs font-medium uppercase tracking-wider">Scroll</span>
           <svg
             className="h-5 w-5"
             fill="none"

@@ -3,6 +3,7 @@ import { Layout } from '@/components/Layout'
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from 'next/font/google'
 
 import '@/styles/tailwind.css'
+import { yearsOfExperience, RESEARCH_CITATIONS } from '@/lib/siteFacts'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -30,8 +31,7 @@ export const metadata = {
     template: '%s - Abdullah Mujahid',
     default: 'Abdullah Mujahid - Engineering Leader & AI Architect',
   },
-  description:
-    'Engineering Manager & Tech Lead with 8+ years building scalable systems across AI, fintech, and healthcare. 389+ research citations. Building teams that ship and systems that scale.',
+  description: `Engineering Manager & Tech Lead with ${yearsOfExperience}+ years building scalable systems across AI, fintech, and healthcare. ${RESEARCH_CITATIONS}+ research citations. Building teams that ship and systems that scale.`,
   keywords: [
     'Abdullah Mujahid',
     'Engineering Manager',
@@ -67,8 +67,7 @@ export const metadata = {
     url: siteUrl,
     siteName: 'Abdullah Mujahid',
     title: 'Abdullah Mujahid - Engineering Leader & AI Architect',
-    description:
-      'Engineering Manager & Tech Lead with 8+ years building scalable systems across AI, fintech, and healthcare. Building teams that ship and systems that scale.',
+    description: `Engineering Manager & Tech Lead with ${yearsOfExperience}+ years building scalable systems across AI, fintech, and healthcare. Building teams that ship and systems that scale.`,
     images: [
       {
         url: `${siteUrl}/og-image.png`,
@@ -81,8 +80,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Abdullah Mujahid - Engineering Leader & AI Architect',
-    description:
-      'Engineering Manager & Tech Lead with 8+ years building scalable systems across AI, fintech, and healthcare.',
+    description: `Engineering Manager & Tech Lead with ${yearsOfExperience}+ years building scalable systems across AI, fintech, and healthcare.`,
     creator: '@abdulladgaf',
     images: [`${siteUrl}/og-image.png`],
   },
@@ -142,7 +140,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${plusJakartaSans.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`dark h-full antialiased ${plusJakartaSans.variable} ${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -151,7 +149,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="flex h-full bg-background-light font-body dark:bg-background-dark" suppressHydrationWarning>
+      <body className="flex h-full bg-background-dark font-body" suppressHydrationWarning>
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>

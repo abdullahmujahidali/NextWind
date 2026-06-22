@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
+import { yearsOfExperience } from '@/lib/siteFacts'
 
 import logoArisbe from '@/images/logos/arisbe.png'
 import logoHelioStream from '@/images/logos/chimera.svg'
@@ -255,7 +256,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
-            19 projects shipped over 8 years. AI platforms, AgTech systems, healthcare, fintech tools, and more. Here are the highlights.
+            {featuredProjects.length + otherProjects.length} projects shipped over {yearsOfExperience} years. AI platforms, AgTech systems, healthcare, fintech tools, and more. Here are the highlights.
           </p>
         </ScrollReveal>
 

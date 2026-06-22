@@ -11,7 +11,7 @@ const projects = [
     oneLiner: 'Regulatory reporting for European banks',
     outcome: 'Built from scratch → 50+ institutions now use it',
     tech: ['React', 'Django', 'PostgreSQL', 'AWS'],
-    color: 'bg-blue-500',
+    color: 'bg-primary',
   },
   {
     title: 'AIRA',
@@ -19,7 +19,7 @@ const projects = [
     oneLiner: 'AI-powered investor intelligence',
     outcome: 'Multi-LLM system processing millions of data points',
     tech: ['Next.js', 'LangChain', 'RAG', 'Pinecone'],
-    color: 'bg-violet-500',
+    color: 'bg-primary',
   },
   {
     title: 'Mitra AI',
@@ -27,7 +27,7 @@ const projects = [
     oneLiner: 'Real-time voice AI for therapy',
     outcome: '92%+ accuracy speaker diarization, HIPAA compliant',
     tech: ['Python', 'LiveKit', 'GPT-4', 'WebSockets'],
-    color: 'bg-pink-500',
+    color: 'bg-primary',
   },
   {
     title: 'VeterinaryAI',
@@ -35,7 +35,7 @@ const projects = [
     oneLiner: 'AI diagnostics for 50+ vet practices',
     outcome: '10K+ medical records analyzed daily, 87% accuracy',
     tech: ['LangGraph', 'Pinecone', 'FastAPI', 'React'],
-    color: 'bg-emerald-500',
+    color: 'bg-primary',
   },
 ]
 
@@ -44,14 +44,11 @@ export function FeaturedProjects() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mb-12">
-          <span className="font-mono text-sm font-medium uppercase tracking-wider text-primary dark:text-primary-400">
-            Featured Work
-          </span>
-          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
             Projects I&apos;m proud of
           </h2>
           <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
-            Not just code — outcomes. Each project solved a real problem for real users.
+            A few that shipped, scaled, and still run in production.
           </p>
         </ScrollReveal>
 

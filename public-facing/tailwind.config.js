@@ -21,27 +21,30 @@ module.exports = {
     },
     extend: {
       colors: {
+        // Field green — single accent, used sparingly (links, hover, role, key numbers)
         primary: {
-          DEFAULT: '#6366F1',
-          50: '#EEEEFF',
-          100: '#E0E1FE',
-          200: '#C3C5FD',
-          300: '#A5A8FC',
-          400: '#878AFB',
-          500: '#6366F1',
-          600: '#4F52E9',
-          700: '#3B3EE1',
-          800: '#2729D9',
-          900: '#1315D1',
+          DEFAULT: '#4F9D69',
+          50: '#EEF6F0',
+          100: '#D8EADE',
+          200: '#B3D6BF',
+          300: '#8DC2A0',
+          400: '#68AE80',
+          500: '#4F9D69',
+          600: '#3F8155',
+          700: '#326645',
+          800: '#274F36',
+          900: '#1C3A28',
         },
-        'primary-end': '#8B5CF6',
+        // No gradient — primary-end resolves to the same green so any lingering
+        // gradient stop renders flat rather than rainbow.
+        'primary-end': '#4F9D69',
         accent: {
           warm: '#F59E0B',
           success: '#10B981',
         },
         background: {
           light: '#FAFAFA',
-          dark: '#09090B',
+          dark: '#0E0F0D',
         },
       },
       fontFamily: {
@@ -104,15 +107,15 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(139, 92, 246, 0.5)' },
+          '0%': { boxShadow: '0 0 20px rgba(79, 157, 105, 0.25)' },
+          '100%': { boxShadow: '0 0 36px rgba(79, 157, 105, 0.4)' },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'primary-gradient': 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)',
-        'hero-gradient': 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%)',
+        'primary-gradient': '#4F9D69',
+        'hero-gradient': '#4F9D69',
       },
       backdropBlur: {
         xs: '2px',
@@ -146,10 +149,10 @@ module.exports = {
         css: {
           '--tw-prose-body': theme('colors.zinc.600'),
           '--tw-prose-headings': theme('colors.zinc.900'),
-          '--tw-prose-links': theme('colors.teal.500'),
-          '--tw-prose-links-hover': theme('colors.teal.600'),
-          '--tw-prose-underline': theme('colors.teal.500 / 0.2'),
-          '--tw-prose-underline-hover': theme('colors.teal.500'),
+          '--tw-prose-links': theme('colors.primary.500'),
+          '--tw-prose-links-hover': theme('colors.primary.600'),
+          '--tw-prose-underline': theme('colors.primary.500 / 0.25'),
+          '--tw-prose-underline-hover': theme('colors.primary.500'),
           '--tw-prose-bold': theme('colors.zinc.900'),
           '--tw-prose-counters': theme('colors.zinc.900'),
           '--tw-prose-bullets': theme('colors.zinc.900'),
@@ -166,10 +169,10 @@ module.exports = {
 
           '--tw-prose-invert-body': theme('colors.zinc.400'),
           '--tw-prose-invert-headings': theme('colors.zinc.200'),
-          '--tw-prose-invert-links': theme('colors.teal.400'),
-          '--tw-prose-invert-links-hover': theme('colors.teal.400'),
-          '--tw-prose-invert-underline': theme('colors.teal.400 / 0.3'),
-          '--tw-prose-invert-underline-hover': theme('colors.teal.400'),
+          '--tw-prose-invert-links': theme('colors.primary.400'),
+          '--tw-prose-invert-links-hover': theme('colors.primary.400'),
+          '--tw-prose-invert-underline': theme('colors.primary.400 / 0.3'),
+          '--tw-prose-invert-underline-hover': theme('colors.primary.400'),
           '--tw-prose-invert-bold': theme('colors.zinc.200'),
           '--tw-prose-invert-counters': theme('colors.zinc.200'),
           '--tw-prose-invert-bullets': theme('colors.zinc.200'),

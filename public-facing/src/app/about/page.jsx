@@ -11,11 +11,12 @@ import {
   MediumIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/abdullah.JPG'
+import { yearsOfExperience } from '@/lib/siteFacts'
 
 const quickFacts = [
   { label: 'Based in', value: 'Lahore, Pakistan' },
   { label: 'Sometimes in', value: 'Dubai, UAE' },
-  { label: 'Experience', value: '8+ years' },
+  { label: 'Experience', value: `${yearsOfExperience}+ years` },
   { label: 'Work style', value: 'Hybrid' },
 ]
 
@@ -100,16 +101,16 @@ export default function About() {
         <ScrollReveal className="mt-16">
           <div className="prose prose-zinc mx-auto dark:prose-invert">
             <p className="text-lg leading-relaxed">
-              I build systems that scale startups into success stories. My journey started in 2016 with a farm management app for Irish agricultural businesses — my first lesson that <strong>technology only matters when it solves real problems</strong>.
+              I started in 2016 building a farm-management app for Irish agricultural businesses. It taught me the only lesson that stuck: <strong>technology matters when it solves a real problem, and not before</strong>.
             </p>
             <p>
-              Eight years later, that mindset hasn&apos;t changed. The problems have gotten more complex — multi-LLM architectures, real-time voice AI, HIPAA-compliant healthcare systems — but the goal remains the same: ship software that genuinely helps people.
+              {yearsOfExperience} years on, the problems are harder — multi-LLM architectures, real-time voice AI, HIPAA-compliant healthcare systems — but the bar is the same: ship software people actually use.
             </p>
             <p>
-              What sets me apart is that I&apos;ve been on both sides. I&apos;ve written production code for systems serving 100K+ users. I&apos;ve also built engineering teams from scratch, hired 20+ engineers, and established processes that cut bug rates by 35-45%. I know what good code looks like <em>and</em> what it takes to consistently ship it.
+              I&apos;ve worked both sides. I&apos;ve written production code for systems serving 100K+ users. I&apos;ve also built engineering teams from scratch, hired 20+ engineers, and put in processes that cut bug rates 35&ndash;45%. I know what good code looks like, and what it takes to ship it on a schedule.
             </p>
             <p>
-              Today, I&apos;m particularly excited about AI that goes beyond demos — investor intelligence platforms, medical diagnostics, voice interfaces that actually work. If you&apos;re building something ambitious, I&apos;d love to hear about it.
+              Right now I&apos;m most interested in AI that does more than demo well — investor-intelligence platforms, medical diagnostics, voice interfaces that hold up in production. Building something in that space? Tell me about it.
             </p>
           </div>
         </ScrollReveal>
