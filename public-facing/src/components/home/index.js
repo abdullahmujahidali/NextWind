@@ -1,5 +1,6 @@
 export { Hero } from './Hero'
 export { ImpactStats } from './ImpactStats'
+export { HowIWork } from './HowIWork'
 export { WhatIDo } from './WhatIDo'
 export { FeaturedProjects } from './FeaturedProjects'
 export { TechStack } from './TechStack'

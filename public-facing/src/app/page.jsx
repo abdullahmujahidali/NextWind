@@ -1,6 +1,7 @@
 import {
   Hero,
   ImpactStats,
+  HowIWork,
   WhatIDo,
   FeaturedProjects,
   TechStack,
@@ -23,6 +24,11 @@ export default async function Home() {
 
       {/* Impact Stats */}
       <ImpactStats />
+
+      <SectionDivider />
+
+      {/* How I Work — Forward Deployed Engineering */}
+      <HowIWork />
 
       <SectionDivider />
 

@@ -13,9 +13,7 @@ import {
 } from '@/components/SocialIcons'
 
 const roles = [
-  'Engineering Lead',
   'Engineering Manager',
-  'Forward Deployed Engineer',
   'AI/LLM Architect',
   'Tech Lead',
   'Technical Product Manager',
@@ -67,10 +65,13 @@ export function Hero() {
             </span>
           </h1>
 
-          <div className="mt-6 flex items-center justify-center text-xl font-medium text-zinc-600 dark:text-zinc-400 sm:text-2xl">
-            <span className="text-primary dark:text-primary-400">
-              <RotatingText texts={roles} interval={3000} />
-            </span>
+          <div className="mt-6 text-2xl font-semibold text-primary-400 sm:text-3xl">
+            Forward Deployed Engineer
+          </div>
+
+          <div className="mt-2 flex items-center justify-center text-base font-medium text-zinc-500 sm:text-lg">
+            <span>also&nbsp;</span>
+            <RotatingText texts={roles} interval={3000} />
           </div>
 
           <motion.p
@@ -79,7 +80,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mx-auto mt-8 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400"
           >
-            Engineering Manager and Tech Lead. {PROJECTS_SHIPPED} production systems shipped over {yearsOfExperience} years &mdash; across AI, AgTech, EduTech, fintech, and healthcare. From 3D feed-measurement to HIPAA-compliant clinical platforms.
+            I embed with teams and ship production systems in their context &mdash; {PROJECTS_SHIPPED} of them over {yearsOfExperience} years, across AI, AgTech, EduTech, fintech, and healthcare. From 3D feed-measurement on real dairy farms to HIPAA-compliant clinical platforms.
           </motion.p>
 
           <motion.div
