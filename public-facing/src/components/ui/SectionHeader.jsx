@@ -43,8 +43,8 @@ export function SectionHeader({
 
 export function SectionDivider({ className = '' }) {
   return (
-    <div className={clsx('py-12 md:py-20', className)}>
-      <div className="mx-auto h-px w-full max-w-6xl bg-gradient-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
+    <div className={clsx('py-2 md:py-4', className)}>
+      <div className="mx-auto h-px w-full max-w-6xl bg-zinc-800" />
     </div>
   )
 }

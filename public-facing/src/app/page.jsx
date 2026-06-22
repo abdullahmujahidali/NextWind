@@ -41,11 +41,6 @@ export default async function Home() {
 
       <SectionDivider />
 
-      {/* Career Timeline */}
-      {/* <Timeline /> */}
-
-      <SectionDivider />
-
       {/* Research & Publications */}
       <Research />
 

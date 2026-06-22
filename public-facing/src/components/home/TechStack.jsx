@@ -103,8 +103,8 @@ export function TechStack() {
                     <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                       {item.detail}
                     </p>
-                    {/* Subtle gradient line on left */}
-                    <div className="absolute bottom-4 left-0 top-4 w-0.5 rounded-full bg-gradient-to-b from-primary/50 via-primary-end/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                    {/* Accent line on left (hover) */}
+                    <div className="absolute bottom-4 left-0 top-4 w-0.5 rounded-full bg-primary/60 opacity-0 transition-opacity group-hover:opacity-100" />
                   </motion.div>
                 ))}
               </div>
