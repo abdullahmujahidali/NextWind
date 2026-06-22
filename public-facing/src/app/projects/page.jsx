@@ -19,8 +19,39 @@ import logoMitra from '@/images/logos/mitra-ai.svg'
 import logoSiParadigm from '@/images/logos/siParadigm.svg'
 import logoDeals4Autos from '@/images/logos/airbnb.svg'
 import logoMintvo from '@/images/logos/mintvo.svg'
+import logoSilagePlan from '@/images/logos/silageplan.png'
+import logoFeedBunkAI from '@/images/logos/feedbunkai.png'
+import logoRumiWalk from '@/images/logos/rumiwalk.png'
+import logoCardiobase from '@/images/logos/cardiobase.png'
 
 const featuredProjects = [
+  {
+    name: 'SilagePlan',
+    tagline: 'AgTech platform for feed inventory and 3D pile measurement',
+    role: 'Technical Lead',
+    outcome: '3D feed-pile volumetrics from drone imagery, with inventory, mapping, and flight management — built full-stack',
+    link: 'https://app.silageplan.com/',
+    logo: logoSilagePlan,
+    tech: ['React', 'Three.js', 'Django', 'PostgreSQL'],
+  },
+  {
+    name: 'FeedBunkAI',
+    tagline: 'Computer-vision analysis of cattle feed bunks',
+    role: 'Technical Lead',
+    outcome: 'ML pipeline (YOLO v11 + SegFormer) scoring feed levels from images and video into temporal reports',
+    link: 'https://app.feedbunkai.com',
+    logo: logoFeedBunkAI,
+    tech: ['React', 'Django', 'Celery', 'PyTorch', 'AWS Batch'],
+  },
+  {
+    name: 'Rumi Walk',
+    tagline: 'Mobile dairy-farm inspection with AI reporting',
+    role: 'Technical Lead',
+    outcome: 'Offline-first app turning voice walkthroughs into 9 scored KPIs and AI health reports',
+    link: '#',
+    logo: logoRumiWalk,
+    tech: ['React Native', 'Expo', 'Node.js', 'OpenAI'],
+  },
   {
     name: 'AIRA',
     tagline: 'AI-powered investor intelligence',
@@ -65,6 +96,15 @@ const featuredProjects = [
     link: 'https://mintvo.app',
     logo: logoMintvo,
     tech: ['Next.js', 'FastAPI', 'Supabase', 'TypeScript'],
+  },
+  {
+    name: 'Cardiobase',
+    tagline: 'Multi-site platform for sleep and respiratory diagnostics',
+    role: 'Senior Developer',
+    outcome: 'Clinical workflow for requesting, performing, and scoring tests across sites — with patient records, HL7 hospital integration, and per-site access control',
+    link: '#',
+    logo: logoCardiobase,
+    tech: ['React', 'GraphQL', 'Hasura', 'Flask', 'PostgreSQL'],
   },
 ]
 
@@ -215,7 +255,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
-            15 projects shipped over 8 years. AI platforms, healthcare systems, fintech tools, and more. Here are the highlights.
+            19 projects shipped over 8 years. AI platforms, AgTech systems, healthcare, fintech tools, and more. Here are the highlights.
           </p>
         </ScrollReveal>
 
