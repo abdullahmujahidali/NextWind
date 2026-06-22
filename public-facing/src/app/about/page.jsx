@@ -24,7 +24,7 @@ const timeline = [
   { year: '2016', event: 'First production app — farm management for 600+ Irish businesses' },
   { year: '2019', event: 'Moved into senior roles, started leading small teams' },
   { year: '2021', event: 'Healthcare tech — built HIPAA-compliant systems processing 10K+ records/day' },
-  { year: '2023', event: 'Research published — 389+ citations on computer vision paper' },
+  { year: '2023', event: 'Research published — 415+ citations on computer vision paper' },
   { year: '2024', event: 'Engineering Manager — led RegNxt from zero to 50+ financial institutions' },
   { year: '2025', event: 'AI architecture — multi-LLM systems, voice AI with 92%+ accuracy' },
 ]

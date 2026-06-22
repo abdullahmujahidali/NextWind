@@ -7,8 +7,8 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal'
 export function ContactCTA() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-end to-primary opacity-90" />
+      {/* Background — deep green, single hue for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800" />
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">

@@ -13,7 +13,7 @@ export const CAREER_START_YEAR = 2016
 export const PROJECTS_SHIPPED = 19
 
 // Research citations (Google Scholar). Update manually when it moves.
-export const RESEARCH_CITATIONS = 389
+export const RESEARCH_CITATIONS = 415
 
 // Computed at build/render time — always current, never hardcoded.
 export const yearsOfExperience = new Date().getFullYear() - CAREER_START_YEAR

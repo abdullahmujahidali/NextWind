@@ -26,7 +26,7 @@ export function ImpactStats() {
           {stats.map((stat, index) => (
             <StaggerItem key={index}>
               <div className="group relative">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-primary-end/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative p-6 text-center">
                   <StatCard
                     value={stat.value}

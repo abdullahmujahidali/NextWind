@@ -101,9 +101,9 @@ export default async function Image() {
             }}
           >
             {[
-              { value: '8+', label: 'Years' },
+              { value: '9+', label: 'Years' },
               { value: '100K+', label: 'Users' },
-              { value: '389+', label: 'Citations' },
+              { value: '415+', label: 'Citations' },
               { value: '15+', label: 'Projects' },
             ].map((stat) => (
               <div

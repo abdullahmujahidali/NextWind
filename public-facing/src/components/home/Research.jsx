@@ -10,7 +10,7 @@ const publication = {
   title: 'Real-Time Hand Gesture Recognition Based on Deep Learning YOLOv3 Model',
   journal: 'Applied Sciences (MDPI)',
   year: '2021',
-  citations: 389,
+  citations: RESEARCH_CITATIONS,
   link: 'https://www.mdpi.com/2076-3417/11/9/4164',
   description: 'A lightweight YOLOv3 + DarkNet-53 model achieving 97.68% accuracy for real-time gesture recognition — enabling accessibility technology for people with disabilities to communicate effectively.',
   keywords: ['Computer Vision', 'YOLOv3', 'Deep Learning', 'CNN', 'Accessibility'],
@@ -31,13 +31,13 @@ export function Research() {
             whileHover={{ y: -4 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           >
-            {/* Gradient accent */}
-            <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-primary to-primary-end" />
+            {/* Accent bar */}
+            <div className="absolute left-0 top-0 h-1 w-full bg-primary" />
 
             <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
               {/* Citation count */}
               <div className="flex-shrink-0 text-center md:text-left">
-                <div className="inline-flex flex-col items-center rounded-2xl bg-gradient-to-br from-primary/10 to-primary-end/10 p-6">
+                <div className="inline-flex flex-col items-center rounded-2xl bg-primary/10 p-6">
                   <div className="font-display text-4xl font-bold text-primary dark:text-primary-400 md:text-5xl">
                     <AnimatedCounter value={publication.citations} suffix="+" />
                   </div>
@@ -112,7 +112,7 @@ export function Research() {
             </div>
 
             {/* Hover effect */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/5 to-primary-end/5 opacity-0 transition-opacity group-hover:opacity-100" />
+            <div className="absolute inset-0 -z-10 bg-primary/5 opacity-0 transition-opacity group-hover:opacity-100" />
           </motion.div>
         </ScrollReveal>
       </div>

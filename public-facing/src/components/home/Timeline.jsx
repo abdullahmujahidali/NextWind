@@ -165,7 +165,7 @@ export function Timeline() {
         <ScrollReveal className="mt-12">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { label: 'Years', value: '8+' },
+              { label: 'Years', value: '9+' },
               { label: 'Companies', value: '7' },
               { label: 'Work Style', value: 'Hybrid' },
               { label: 'Products Shipped', value: '15+' },
