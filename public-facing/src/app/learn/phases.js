@@ -51,8 +51,8 @@ export const phases = [
       html: "<b>No powerful computer? You can still start.</b> An old laptop is fine all the way up to Phase 8. If all you have is a phone, write and run real code in the browser with <b>Replit</b> (replit.com) or <b>Google Colab</b> (colab.research.google.com) — nothing to install.",
     },
     videos: [
-      { main: true, label: 'Harvard CS50, Lecture 0 — what programming actually is', href: 'https://www.youtube.com/results?search_query=CS50+Lecture+0+2026' },
-      { label: 'freeCodeCamp — the terminal / command line for beginners', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+command+line+terminal+for+beginners' },
+      { main: true, label: 'Harvard CS50 — Lecture 0: what programming actually is', href: 'https://www.youtube.com/watch?v=3LPJfIKxwWc' },
+      { label: 'freeCodeCamp — the terminal / command line for beginners', href: 'https://www.youtube.com/watch?v=uwAqEzhyjtw' },
     ],
     practice: [
       'Install Python and make it print the words <i>Hello, world</i>.',
@@ -78,9 +78,9 @@ export const phases = [
       '<b>OOP</b> (= a way to group code into "objects" that hold both data and actions). This one feels hard at first — that is completely normal, go slow.',
     ],
     videos: [
-      { main: true, label: 'Programming with Mosh: Python for Beginners (≈6 hrs)', href: 'https://www.youtube.com/results?search_query=Programming+with+Mosh+Python+for+Beginners+6+hours' },
+      { main: true, label: 'Programming with Mosh — Python for Beginners (≈6 hrs)', href: 'https://www.youtube.com/watch?v=K5KVEU3aaeQ' },
       { label: 'freeCodeCamp — Learn Python, Full Course', href: 'https://www.youtube.com/watch?v=rfscVS0vtbw' },
-      { label: 'Corey Schafer — Python Tutorials (for harder topics like OOP)', href: 'https://www.youtube.com/results?search_query=Corey+Schafer+Python+Tutorial+playlist' },
+      { label: 'Corey Schafer — Python Tutorials (playlist, great for OOP)', href: 'https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7' },
       { label: 'Urdu/Hindi — CodeWithHarry: The Ultimate Python Course', href: 'https://www.youtube.com/watch?v=UrsmFxEIp5k' },
     ],
     practice: [
@@ -105,10 +105,10 @@ export const phases = [
       '<b>Big-O</b> (= a simple way to say how much slower your code gets when the data gets big).',
     ],
     videos: [
-      { main: true, label: 'Harvard CS50 (full course, free)', href: 'https://www.youtube.com/results?search_query=CS50+full+course+Harvard' },
-      { label: 'freeCodeCamp — Data Structures and Algorithms', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+data+structures+and+algorithms+full+course' },
-      { label: 'Traversy Media — Git & GitHub crash course', href: 'https://www.youtube.com/results?search_query=Traversy+Media+Git+and+GitHub+crash+course' },
-      { label: 'NeetCode — how to solve coding problems', href: 'https://www.youtube.com/results?search_query=NeetCode' },
+      { main: true, label: 'Harvard CS50 — full course (free)', href: 'https://www.youtube.com/watch?v=8mAITcNt710' },
+      { label: 'freeCodeCamp — Data Structures & Algorithms, full course', href: 'https://www.youtube.com/watch?v=8hly31xKli0' },
+      { label: 'Traversy Media — Git & GitHub crash course', href: 'https://www.youtube.com/watch?v=SWYqp7iY_Tc' },
+      { label: 'NeetCode — how to solve coding problems (channel)', href: 'https://www.youtube.com/@NeetCode/videos' },
     ],
     practice: [
       'Write a "binary search" (a fast way to find a number in a sorted list).',
@@ -121,32 +121,29 @@ export const phases = [
   },
   {
     n: 'Phase 3',
-    title: 'Maths for AI',
-    time: 'slow, in the background',
-    why: 'This is the secret weapon. Most people skip it — and that is exactly why most people can use AI but cannot build it. Go slowly, a little at a time, next to your school maths.',
+    title: 'Maths for AI — later, optional',
+    time: 'come back to this much later',
+    why: 'Don’t worry about this one yet. It only matters much later, if you decide to BUILD AI rather than just use it — and most of it is maths you’ll meet naturally in college. Right now, keep your focus on building.',
     learn: [
-      '<b>Linear algebra</b> (= the maths of vectors and matrices). A <b>vector</b> (= a list of numbers); a <b>matrix</b> (= a grid of numbers). This is the language AI speaks.',
-      'Calculus — slopes and gradients (this is literally how AI "learns").',
-      'Probability and statistics — averages, spread, and chance.',
+      'For now, just know the <b>names</b> so they aren’t scary later: <b>linear algebra</b> (maths of vectors and matrices), <b>calculus</b> (slopes and how things change), and <b>statistics</b> (averages, spread, and chance).',
+      'You don’t need to study these now. You’ll see <i>why</i> they matter once you start building AI in Phase 9 — and that’s the right time to learn them properly.',
+      'If maths is your thing and you’re curious, the videos below are the friendliest intros out there. Totally optional.',
     ],
     callout: {
       kind: 'note',
-      html: 'You can be a great website developer with almost no advanced maths. But to truly BUILD AI (not just use it), this maths is a must. No rush — just keep nibbling at it.',
+      html: '<b>Important:</b> you can build websites and full apps with almost no advanced maths. This page is here so you know the maths exists and where it fits — not as homework. Skip ahead to Phase 4 and keep building; come back to this only when you reach the deep-AI part.',
     },
     videos: [
-      { main: true, label: '3Blue1Brown: Essence of Linear Algebra (beautiful, makes it click)', href: 'https://www.youtube.com/results?search_query=3Blue1Brown+Essence+of+Linear+Algebra' },
-      { label: '3Blue1Brown — Essence of Calculus', href: 'https://www.youtube.com/results?search_query=3Blue1Brown+Essence+of+Calculus' },
-      { label: 'StatQuest — Statistics, made simple', href: 'https://www.youtube.com/results?search_query=StatQuest+Statistics+Fundamentals+playlist' },
-      { label: 'Khan Academy — for step-by-step practice', href: 'https://www.youtube.com/results?search_query=Khan+Academy+linear+algebra' },
+      { main: true, label: '3Blue1Brown — Essence of Linear Algebra (save for later)', href: 'https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab' },
+      { label: '3Blue1Brown — Essence of Calculus (save for later)', href: 'https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr' },
+      { label: 'StatQuest — Statistics Fundamentals (save for later)', href: 'https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9' },
     ],
     practice: [
-      'By hand, add and multiply two small (2×2) grids of numbers.',
-      'Find the slope (derivative) of x² + 3x.',
-      'Find the average and spread of a few numbers.',
-      'Do the same grid maths in Python with <b>NumPy</b> (= a Python tool for fast number maths).',
+      'Nothing to do here right now. Keep your momentum and move to Phase 4.',
+      'When you reach Phase 9 and want to go deep on AI, come back and watch the videos above.',
     ],
-    project: 'A short Python notebook that opens a small data file, finds the averages, and draws a simple chart with <b>Matplotlib</b> (= a Python tool for making charts).',
-    ready: 'You are not scared of a matrix or a graph, and you can do small maths both by hand and in Python.',
+    project: 'No project for this phase yet. Your “project” is to not get stuck here — move on and keep building.',
+    ready: 'You know this maths exists and where it fits in. That’s all you need for now — on to Phase 4.',
   },
   {
     n: 'Phase 4',
@@ -159,11 +156,11 @@ export const phases = [
       '<b>JavaScript</b> (= makes the page DO things when you click or type). You’ll meet the <b>DOM</b> (= the live page that JavaScript can change) and <b>async</b> code (= code that waits for slow things, like the internet, without freezing the page).',
     ],
     videos: [
-      { main: true, label: 'freeCodeCamp: Responsive Web Design (HTML & CSS)', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+responsive+web+design+HTML+CSS+full+course' },
-      { label: 'Kevin Powell — the CSS master (for anything that confuses you)', href: 'https://www.youtube.com/results?search_query=Kevin+Powell+CSS' },
-      { label: 'Web Dev Simplified — JavaScript made simple', href: 'https://www.youtube.com/results?search_query=Web+Dev+Simplified+JavaScript' },
-      { label: 'The Net Ninja — Modern JavaScript (playlist)', href: 'https://www.youtube.com/results?search_query=The+Net+Ninja+modern+JavaScript+tutorial+playlist' },
-      { label: 'Traversy Media — 50 Projects in 50 Days (lots of practice)', href: 'https://www.youtube.com/results?search_query=Traversy+Media+50+projects+in+50+days' },
+      { main: true, label: 'freeCodeCamp — HTML & CSS full course for beginners', href: 'https://www.youtube.com/watch?v=mU6anWqZJcc' },
+      { label: 'Kevin Powell — the CSS master (channel)', href: 'https://www.youtube.com/@KevinPowell/videos' },
+      { label: 'Web Dev Simplified — JavaScript (channel)', href: 'https://www.youtube.com/@WebDevSimplified/videos' },
+      { label: 'The Net Ninja — Modern JavaScript (playlist)', href: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc' },
+      { label: 'Traversy Media — JavaScript crash course', href: 'https://www.youtube.com/watch?v=hdI2bqOjy3c' },
     ],
     practice: [
       'Build a simple recipe page.',
@@ -196,10 +193,10 @@ export const phases = [
       },
     ],
     videos: [
-      { main: true, label: 'The Net Ninja — Full Modern React Tutorial (React 19)', href: 'https://www.youtube.com/results?search_query=The+Net+Ninja+full+modern+react+tutorial' },
-      { label: 'Traversy Media — React crash course', href: 'https://www.youtube.com/results?search_query=Traversy+Media+React+crash+course' },
-      { label: 'JavaScript Mastery — build real React projects', href: 'https://www.youtube.com/results?search_query=JavaScript+Mastery+react+project' },
-      { label: 'Traversy Media — TypeScript crash course (later)', href: 'https://www.youtube.com/results?search_query=Traversy+Media+TypeScript+crash+course' },
+      { main: true, label: 'The Net Ninja — Full Modern React Tutorial (playlist)', href: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d' },
+      { label: 'JavaScript Mastery — build real React projects (channel)', href: 'https://www.youtube.com/@javascriptmastery/videos' },
+      { label: 'Programming with Mosh — React for Beginners', href: 'https://www.youtube.com/watch?v=SqcY0GlETPk' },
+      { label: 'Traversy Media — TypeScript crash course (later)', href: 'https://www.youtube.com/watch?v=BCg4U1FzODs' },
     ],
     practice: [
       'A counter with + and − buttons.',
@@ -223,9 +220,9 @@ export const phases = [
       'Pick one tool: <b>FastAPI</b> (= modern, fast, and great for AI — recommended) or <b>Django</b> (= bigger, comes with lots built in).',
     ],
     videos: [
-      { main: true, label: 'freeCodeCamp: FastAPI / Python API Development', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+FastAPI+python+API+development+full+course' },
-      { label: 'freeCodeCamp — Django full course', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+Django+full+course' },
-      { label: 'The Net Ninja — Django (playlist)', href: 'https://www.youtube.com/results?search_query=The+Net+Ninja+Django+tutorial+playlist' },
+      { main: true, label: 'freeCodeCamp — FastAPI / Python API development (full course)', href: 'https://www.youtube.com/watch?v=0sOvCWFmrtA' },
+      { label: 'freeCodeCamp — Django full course for beginners', href: 'https://www.youtube.com/watch?v=rHux0gMZ3Eg' },
+      { label: 'The Net Ninja — Django (playlist)', href: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9MFu7lcd_QqgvBcN_zUFFXC' },
       { label: 'Official FastAPI tutorial (one of the best anywhere)', href: 'https://fastapi.tiangolo.com/learn/' },
     ],
     practice: [
@@ -250,9 +247,9 @@ export const phases = [
       'Easy modern option: <b>Supabase</b> (= a ready-made online database with login built in).',
     ],
     videos: [
-      { main: true, label: 'freeCodeCamp: SQL Full Course', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+SQL+full+course+for+beginners' },
-      { label: 'The Net Ninja — SQL & MongoDB (playlists)', href: 'https://www.youtube.com/results?search_query=The+Net+Ninja+SQL+tutorial+playlist' },
-      { label: 'Supabase — crash course', href: 'https://www.youtube.com/results?search_query=Supabase+crash+course+freeCodeCamp' },
+      { main: true, label: 'freeCodeCamp — SQL full course for beginners', href: 'https://www.youtube.com/watch?v=HXV3zeQKqGY' },
+      { label: 'The Net Ninja — SQL for beginners (playlist)', href: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9iu6mD3EW1Qs8b9X1Sz7gPN' },
+      { label: 'freeCodeCamp — Supabase crash course', href: 'https://www.youtube.com/watch?v=dU7GwCOgvNY' },
     ],
     practice: [
       'On paper, design 3 tables (users, posts, comments) and draw how they connect.',
@@ -275,9 +272,9 @@ export const phases = [
       'Keep secrets in <b>environment variables</b> (= passwords kept outside your code).',
     ],
     videos: [
-      { main: true, label: 'JavaScript Mastery: full-stack project (front to back, deployed)', href: 'https://www.youtube.com/results?search_query=JavaScript+Mastery+full+stack+project' },
-      { label: 'freeCodeCamp — full-stack course', href: 'https://www.youtube.com/results?search_query=freeCodeCamp+full+stack+react+fastapi+project' },
-      { label: 'Fireship — short, clear deployment videos', href: 'https://www.youtube.com/results?search_query=Fireship+deploy+app' },
+      { main: true, label: 'JavaScript Mastery — full-stack projects (channel)', href: 'https://www.youtube.com/@javascriptmastery/videos' },
+      { label: 'freeCodeCamp — full-stack courses (channel)', href: 'https://www.youtube.com/@freecodecamp/search?query=full%20stack' },
+      { label: 'Fireship — short, clear deployment videos (channel)', href: 'https://www.youtube.com/@Fireship/videos' },
     ],
     practice: [
       'Connect your React app to your own API.',
@@ -304,8 +301,8 @@ export const phases = [
     videos: [
       { main: true, label: 'Andrej Karpathy: Neural Networks, Zero to Hero', href: 'https://karpathy.ai/zero-to-hero.html' },
       { label: 'Part A — DeepLearning.AI free short courses (Prompt Engineering, RAG)', href: 'https://www.deeplearning.ai/courses/' },
-      { label: '3Blue1Brown — Neural Networks (the intuition)', href: 'https://www.youtube.com/results?search_query=3Blue1Brown+neural+networks' },
-      { label: 'StatQuest — Machine Learning', href: 'https://www.youtube.com/results?search_query=StatQuest+machine+learning+playlist' },
+      { label: '3Blue1Brown — Neural Networks (playlist, the intuition)', href: 'https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi' },
+      { label: 'StatQuest — Machine Learning (playlist)', href: 'https://www.youtube.com/playlist?list=PLblh5JKOoLULvmT_xrUtwU9PfvFcDFOdj' },
       { label: 'Andrew Ng — Machine Learning (the classic)', href: 'https://www.coursera.org/specializations/machine-learning-introduction' },
     ],
     practice: [
@@ -328,10 +325,10 @@ export const phases = [
       'Keep improving your English — most of the best material is in English, and it opens doors.',
     ],
     videos: [
-      { main: true, label: 'Fireship — what’s new in tech', href: 'https://www.youtube.com/results?search_query=Fireship' },
-      { label: 'ThePrimeagen — a senior developer’s view', href: 'https://www.youtube.com/results?search_query=ThePrimeagen' },
-      { label: 'NeetCode — interviews & system design', href: 'https://www.youtube.com/results?search_query=NeetCode' },
-      { label: 'ArjanCodes — clean Python', href: 'https://www.youtube.com/results?search_query=ArjanCodes+clean+python' },
+      { main: true, label: 'Fireship — what’s new in tech (channel)', href: 'https://www.youtube.com/@Fireship/videos' },
+      { label: 'ThePrimeagen — a senior developer’s view (channel)', href: 'https://www.youtube.com/@ThePrimeagen/videos' },
+      { label: 'NeetCode — interviews & system design (channel)', href: 'https://www.youtube.com/@NeetCode/videos' },
+      { label: 'ArjanCodes — clean Python (channel)', href: 'https://www.youtube.com/@ArjanCodes/videos' },
     ],
     practice: [
       'Write one blog post or README explaining something you built.',
