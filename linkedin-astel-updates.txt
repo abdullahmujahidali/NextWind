@@ -1,0 +1,139 @@
+============================================================
+ASTEL LINKEDIN PROFILE — FULL UPDATE GUIDE
+============================================================
+
+
+------------------------------------------------------------
+1. HEADLINE
+------------------------------------------------------------
+
+Engineering Lead | AI/LLM Architecture & Full-Stack | Building AIRA @ Astel Ventures | RegNxt, Mintvo
+
+
+------------------------------------------------------------
+2. ABOUT
+------------------------------------------------------------
+
+I build AI-powered products and lead the teams behind them. 8+ years shipping SaaS platforms across fintech, healthcare, regulatory compliance, and investor relations.
+
+Currently at Astel Ventures, I'm the engineering lead behind AIRA — an AI-powered investor intelligence platform. I designed the multi-LLM architecture (Claude, OpenAI, Gemini) that handles deal analysis, pitch deck evaluation, and automated investor outreach. Built the full stack from Django APIs to Vue.js frontend to Elasticsearch-powered search.
+
+Before that, I led a team of 6 at Sparignite building RegNxt — a regulatory reporting platform for financial institutions. Architected the ETL pipelines, data versioning, and Excel integration layer that banks actually use daily.
+
+On the side, I built Mintvo (mintvo.app) — a modern invoicing platform for freelancers. Next.js + FastAPI + Supabase, designed and shipped end-to-end.
+
+What I work with day-to-day: Python, Django, FastAPI, React, Next.js, Vue.js, LangGraph, OpenAI/Claude/Gemini APIs, Elasticsearch, PostgreSQL, Redis, Docker, AWS, Azure.
+
+Published researcher with 389+ citations in AI & Computer Vision.
+
+
+------------------------------------------------------------
+3. ASTEL VENTURES — Senior Software Engineer
+   May 2025 - Present
+------------------------------------------------------------
+
+- Lead engineer on AIRA — an AI-powered investor relations and deal analysis platform used by advisory firms and founders
+- Designed and built the multi-LLM architecture (Claude, OpenAI, Gemini) for automated pitch deck analysis, deal scoring across 6 dimensions (Market Need, Innovation, Defensibility, Scalability, Traction, Team), and personalised investor outreach
+- Built full-stack features end-to-end: Django REST APIs, Vue.js frontend, Celery task queues, Elasticsearch-powered investor search with filtering by ticket size, geography, and industry
+- Architected LinkedIn enrichment pipelines processing thousands of investor contacts using BrightData and EmailEngine
+- Set up infrastructure on DigitalOcean with Docker, RabbitMQ, CI/CD pipelines, Sentry monitoring, and Slack alerting
+- Involved in UX audits, product roadmap discussions, and business planning with the founding team
+- Integrated Stripe for payments, RapidAPI and ScraperAPI for data aggregation
+
+Skills: LLM Architecture, Multi-LLM Systems, OpenAI, Anthropic Claude, Gemini, Elasticsearch, Django, Vue.js, Celery, Redis, Docker, DigitalOcean, RabbitMQ, CI/CD, Pitch Deck Analysis, Investor Relations Technology
+
+
+------------------------------------------------------------
+4. SPARIGNITE (REGNXT) — Engineering Technical Lead
+   September 2024 - Present
+------------------------------------------------------------
+
+- Led a team of 6 engineers building RegNxt — a regulatory reporting platform for financial institutions
+- Owned sprint planning, architecture decisions, code reviews, and delivery timelines
+- Architected ETL pipelines using MageAI and DuckDB to process large regulatory datasets for compliance reporting
+- Designed data management systems with version control that passed financial regulatory audits
+- Built Excel integration features that eliminated most manual data entry for banking clients
+- Led codebase refactoring initiative that reduced bug rates and accelerated feature delivery
+- Set up onboarding processes and mentoring program that got new engineers productive within weeks
+- Stack: Django, React, TypeScript, Azure, Azure API Gateway, PostgreSQL, MageAI, DuckDB, Firebase, Docker
+
+Skills: Engineering Management, ETL Pipelines, MageAI, DuckDB, Azure, Regulatory Compliance, Team Leadership, Sprint Planning, Financial Services Technology
+
+
+------------------------------------------------------------
+5. NEW — MINTVO (mintvo.app) — Technical Architect
+   2025 - Present
+------------------------------------------------------------
+
+- Designed and built Mintvo (mintvo.app) — a modern invoicing platform for freelancers and small agencies
+- Architected the full system: Next.js 16 + React 19 frontend, FastAPI backend, Supabase (PostgreSQL + Auth + Storage), WeasyPrint for PDF generation
+- Implemented tiered subscription model with LemonSqueezy billing, Resend for transactional email, and Supabase Row Level Security across all tables
+- Built features including: live invoice previews, public shareable invoice links with view tracking, recurring invoices, client management, and earnings dashboards
+- Designed the database schema, API layer, auth flows, and deployment pipeline (Vercel + Railway)
+- Stack: Next.js, React, TypeScript, FastAPI, Python, Supabase, PostgreSQL, Tailwind CSS, WeasyPrint, LemonSqueezy, Resend, Docker
+
+Skills: System Architecture, Next.js, React, FastAPI, Supabase, PostgreSQL, TypeScript, SaaS, PDF Generation
+
+
+------------------------------------------------------------
+6. NEW — AIM CRM — Technical Lead
+   (pick dates that fit your timeline)
+------------------------------------------------------------
+
+- Led development of a full-scale CRM platform built for sales and customer management
+- Architected the backend with Django/FastAPI, designed the data model for contacts, deals, pipelines, and activity tracking
+- Built frontend components in React with real-time updates and dashboard analytics
+- Implemented role-based access control, email integration, and reporting features
+- Stack: Django, React, PostgreSQL, Redis, Celery, Docker
+
+Skills: CRM Development, Django, React, PostgreSQL, Redis, Technical Leadership
+
+(Adjust the description based on what AIM CRM actually does — let me know if you want me to refine this)
+
+
+------------------------------------------------------------
+7. STEALTH STARTUP — Technical Lead
+   Jul 2022 - Jun 2025
+   (fix the typo: "Tehnical Lead" → "Technical Lead")
+------------------------------------------------------------
+
+- Led an engineering team of 8+, handling architecture decisions, sprint planning, and delivery across multiple product lines
+- Migrated monolithic system to microservices architecture using Django and FastAPI, improving deployment flexibility and reducing system coupling
+- Architected data processing pipelines with Apache Kafka handling 2x traffic growth without performance degradation
+- Built ETL pipelines and analytics systems processing 200K+ daily events with consistent response times
+- Implemented Redis caching and load-balancing strategies that significantly reduced database pressure during peak usage
+- Set up monitoring and alerting that cut incident response time from ~40 minutes to ~15
+- Established CI/CD pipelines, coding standards, and review processes across the team
+- Mentored junior engineers through code reviews and pair programming
+- Stack: Django, FastAPI, Apache Kafka, Docker, Kubernetes, Redis, PostgreSQL, Python, CI/CD
+
+Skills: Engineering Management, Microservices, Apache Kafka, Docker, Kubernetes, Redis, CI/CD, ETL, Team Leadership, Python, Django, FastAPI
+
+
+------------------------------------------------------------
+8. GOLF COUNTRY — Senior Software Engineer
+   Jan 2017 - Aug 2022
+------------------------------------------------------------
+
+- Built the entire backend infrastructure from scratch using Python and Django, scaling to 50K+ daily active users
+- Developed cross-platform desktop application using Electron.js for golf course management and scoring
+- Architected REST APIs for analytics, player tracking, and tournament management
+- Optimised React frontend — reduced bundle size significantly and improved load times
+- Helped set up AWS infrastructure with auto-scaling for traffic management
+- Managed full development lifecycle from requirements gathering to deployment
+- Stack: Django, React, Electron.js, PostgreSQL, AWS, Node.js, Express
+
+Skills: Django, React, Electron.js, PostgreSQL, AWS, Node.js, Full-Stack Development, System Architecture
+
+
+============================================================
+WHAT THIS FIXES (from the report scoring you 6/10)
+============================================================
+
+Report Gap                          → Fix
+─────────────────────────────────────────────────────────
+"No named companies/products"       → RegNxt, AIRA, Mintvo, AIM CRM all named
+"AI/ML experience unclear"          → Multi-LLM architecture detailed in Astel + About
+"Team leadership scope unclear"     → Team of 6 (Sparignite), team of 8+ (Stealth)
+"Limited scaling evidence"          → 50K+ DAU, 200K events/day, Kafka 2x traffic
+"Solid contributor not leader"      → Founder of Mintvo, Tech Lead titles, arch ownership
