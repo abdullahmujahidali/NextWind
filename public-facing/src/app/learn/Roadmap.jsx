@@ -49,30 +49,27 @@ export function Roadmap() {
         </p>
       </div>
 
-      {/* Why I made this */}
+      {/* What you'll be able to build */}
       <h2 className="mt-14 text-2xl font-semibold tracking-tight text-zinc-900">
-        Why I made this
+        What you’ll be able to build
       </h2>
-      <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-zinc-700">
-        <p>
-          I started young, mostly out of curiosity about how computers actually
-          worked. I taught myself a lot of this — and over time that curiosity
-          turned into a career.
-        </p>
-        <p>
-          One thing I learned the hard way:{' '}
-          <b>a degree teaches you the fundamentals, not how to build real
-          things.</b> The theory matters, but it won’t hand you the skills to
-          ship a real app — you pick that up by actually building, on your own,
-          one project at a time.
-        </p>
-        <p>
-          I made this because I wish I’d had it: the path that works, in the
-          right order, with the detours and mistakes already removed. The biggest
-          lesson is the simplest one —{' '}
-          <b>you can teach yourself all of this.</b> Stay curious, build real
-          things, and keep going.
-        </p>
+      <p className="mt-3 text-[15px] leading-relaxed text-zinc-700">
+        This isn’t just watching tutorials. By the end you’ll have real things
+        online that you made yourself — and the skills people actually get paid
+        for.
+      </p>
+      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        {[
+          ['~6 months in', 'Your first website online, with a link you can share.'],
+          ['~1 year in', 'A full app — login, database, the works — live on the internet.'],
+          ['By the end', 'A portfolio of real projects, ready for freelance work or a junior dev job.'],
+          ['The whole time', 'You learn by building, not just watching. Every phase ends with something real.'],
+        ].map(([when, what]) => (
+          <div key={when} className="rounded-xl border border-zinc-200 p-4">
+            <p className="text-sm font-semibold text-primary-700">{when}</p>
+            <p className="mt-1 text-[15px] text-zinc-700">{what}</p>
+          </div>
+        ))}
       </div>
 
       {/* The phases — the journey map */}
